@@ -1,0 +1,19 @@
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Travel Team 3</title>
+  </head>
+  <body>
+    <%= render 'layouts/header' %>
+    <div class="center jumbotron">
+      <h1>Travel Page Home</h1>
+
+      <p>
+        This is the home page for the Travel Project Team 3
+      </p>
+
+      <%= link_to "Contact Page!", '#', class: "btn btn-lg btn-primary" %>
+    </div>
+  </body>
+</html>
