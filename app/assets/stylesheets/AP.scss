@@ -5,7 +5,7 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	size: 60%;
-	padding-top: 1px;
+	margin-top: 5px;
 }
 
 .cf {
@@ -21,7 +21,7 @@
   width: 100%;
   height: 451px;
   margin-left: 0px;
-  margin-top: 0px;
+ 
  
   -webkit-transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
@@ -48,14 +48,15 @@ opacity:0;
 animation-name: cf3FadeInOut;
 animation-timing-function: ease-in-out;
 animation-iteration-count: infinite;
-animation-duration: 4s;
+animation-duration: 15s;
 animation-direction: alternate;
+
 }
 
-#bg-light {
-	background-color: #fff;
-	/*height: 50px;*/
+.bg-light {
+    
 }
+
 
 img.photos {
 	
@@ -87,7 +88,7 @@ hr.hr--logo {
   margin-top: 0;
 }
 hr.hr--logo:after {
-  content: url( 'file:///C:/Users/Stalim/Desktop/logo49x38.png' );
+  content: url( 'C:\Users\Stalim\Desktop\travelTeam3\app\assets\images\logo49x38.png' );
   /* Controls the position of the logo */
   left: 50%;
   position: absolute;
