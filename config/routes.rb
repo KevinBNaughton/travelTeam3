@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'initial_page#AP'
+  root 'initial_page#home'
   get '/home',  to: 'initial_page#home'
   get '/contact',  to: 'initial_page#contact'
   get '/admin',  to: 'initial_page#admin'
