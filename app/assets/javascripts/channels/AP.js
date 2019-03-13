@@ -16,5 +16,3 @@ $('.paths.example .menu .item')
     context: '.paths.example'
   })
 ;
-
-console.log("Hi");

@@ -6,9 +6,11 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "AP.css" %>
   </head>
 
   <body>
       <%= yield %>
+      <script type="text/javascript" src ="app/assets/javascripts/AP.js"></script>
   </body>
 </html>
