@@ -20,6 +20,12 @@
 
 }
 
+.nav-item a {
+
+  margin-left: 1em;
+  color: black;
+}
+
 #submitButtonHome{
 
   float:right
