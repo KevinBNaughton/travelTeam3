@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Be sure to restart your server when you modify this file.
 
 # Version of your assets, change this if you want to expire all your assets.
@@ -33,4 +33,4 @@ Rails.application.config.assets.precompile += %w( AP.css )
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
->>>>>>> 9451ea6b58602d8f26e2f0b97aa6ee92ef138937
+
