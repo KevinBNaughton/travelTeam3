@@ -17,4 +17,4 @@ $('.paths.example .menu .item')
   })
 ;
 
-console.log("Hi");
+

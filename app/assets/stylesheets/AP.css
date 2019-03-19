@@ -15,15 +15,45 @@
   font-family: normal;
 }
 
-.nav-tabs {
+.h2_about_us{
+    text-align: center;
+    font-weight: 600;
+    font-variant: petite-caps;
+    font-family: 'Cormorant Infant', serif;
+    
+    
 
+}
+.p_about_us{
+  text-align: center;
+  font-family: 'Cormorant', serif;
+  font-size: larger;
+  font-style: italic;
+}
+
+
+
+.About_us_image {
+  width: 100%;
+  border-top: 1px solid #170390;
+  border-bottom: 1px solid #170390;
+  resize: all;
 
 }
 
 .nav-item a {
 
-  margin-left: 1em;
-  color: black;
+  color: #163f5e;
+  font-size: 16.5px;
+
+}
+
+.nav-item :hover {
+
+text-decoration: none;
+color:#170390;
+background-color:#f8f9fa;
+  
 }
 
 #submitButtonHome{
@@ -64,6 +94,9 @@
 }
 
 .cf img {
+
+  border-top: 1px solid #170390;
+  border-bottom: 1px solid #170390;
   position:absolute;
   width: 100%;
   height: 451px;
@@ -100,10 +133,6 @@ animation-direction: alternate;
 
 }
 
-.bg-light {
-
-}
-
 
 img.photos {
 
@@ -115,13 +144,14 @@ img.photos {
 }
 
 aside {
-    width: 22%;
-    margin-top: 0.6em;
-    margin-right: 1.6em;
-    margin-left: 1px;
+    width: 24.5%;
+    margin-top: 1em;
+    margin-right: 2.5em;
+    margin-left: 0px;
     float: right;
     font-style: italic;
     color: #29627e;
+    min-width: 262px;
 }
 
 #photosdiv {
@@ -196,3 +226,174 @@ input:-moz-placeholder {
   margin-top: -3px;
   text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.4);
 }
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  margin-left: 6%;
+  margin-right: 2%;
+  margin-top: 3%;
+  width: 42%;
+  padding: 10px;
+  
+   
+}
+
+/* Clear floats after the columns */
+.row {
+  
+  display: table;
+  clear: both;
+  display: -ms-flexbox;
+ 
+
+}
+
+hr.style-four {
+    width: 85%;
+    height: 4px;
+    box-shadow: inset 0 12px 12px -12px rgba(102, 0, 102, 1.5);
+}
+
+.box_about_us_contact_us {
+     display: table-cell;
+    width: 33%;
+    height: 50px;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    font-family: 'Cormorant Roboto';
+    font-weight: 600;
+    text-align: none;
+    font-size: small;
+}
+
+
+#box{
+  
+  margin-left: 20px;
+  text-decoration: none;
+  background: transparent;
+  border-radius:3px;
+  transition:.2s all; 
+}
+#box-wrap:hover #box{
+  filter:blur(3px);
+  opacity:.5;
+  transform: scale(.98);
+  box-shadow:none;
+}
+#box-wrap:hover #box:hover{
+  transform:scale(1);
+  filter:blur(0px);
+  opacity:1;
+  /*box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);*/
+}
+
+
+#post {
+  display: inline-block;
+  width: 28%;
+  margin: 1em;
+  min-width: 187.2px;
+
+}
+
+#post_deals {
+  display: inline-block;
+  width: 28%;
+  margin: 1em;
+  min-width: 187.2px;
+
+}
+
+#info{
+
+     position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+#info h3 {
+
+    margin-right: -15px;
+    border-radius: 35px;
+    text-align: center;
+    margin-top: 20%;
+    background: #472171c2;
+    color: white;
+    float: right;
+    width: 64px;
+    height: 64px;
+    font-size: large;
+    padding-top: 10px;
+    font-weight: 800;
+}
+
+#info h4 {
+
+      color: white;
+    font-size: x-large;
+    margin-left: -17.5px;
+    text-align: -webkit-center;
+    max-width: 152px;
+    background: #663399c2;
+}
+
+#info_deals{
+
+     position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+#info_deals h3 {
+
+    margin-right: -15px;
+    border-radius: 35px;
+    text-align: center;
+    margin-top: 20%;
+    background: #f44336ab;
+    color: white;
+    float: right;
+    width: 64px;
+    height: 64px;
+    font-size: large;
+    padding-top: 10px;
+    font-weight: 800;
+}
+
+#info_deals h4 {
+
+      color: white;
+    font-size: x-large;
+    margin-left: -17.5px;
+    text-align: -webkit-center;
+    max-width: 152px;
+    background: #663399c2;
+}
+
+.jumbotron2 {
+    text-align: center;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px 5px #9E9E9E;
+}
+
+#post_deals button {
+
+    margin-right: -20px;
+    font-size: xx-small;
+    width: 58px;
+    height: 22px;
+    margin-top: -9px;
+}
+
+
+/****************************Sign UP Form Style**********************************************************/
+
