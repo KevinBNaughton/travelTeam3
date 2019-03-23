@@ -18,7 +18,7 @@ class CreateBlogs < ActiveRecord::Migration[5.1]
       t.string :specialName
       t.integer :specialPrice
       t.string :specialDetails
-      t.string :test
+
 
       t.timestamps
     end

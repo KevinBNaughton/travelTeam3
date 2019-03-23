@@ -14,7 +14,14 @@ $ bundle install
 Next, migrate the database:
 
 ```
-$ rails db:migrate
+$ rake db:migrate
+```
+
+Or if we need to update just development or test database,
+
+```
+$ rake db:migrate RAILS_ENV=test
+$ rake db:migrate RAILS_ENV=development
 ```
 
 Finally, run the test suite to verify that everything is working correctly:

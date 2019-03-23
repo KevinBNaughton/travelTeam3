@@ -20,8 +20,8 @@
     font-weight: 600;
     font-variant: petite-caps;
     font-family: 'Cormorant Infant', serif;
-    
-    
+
+
 
 }
 .p_about_us{
@@ -53,7 +53,7 @@
 text-decoration: none;
 color:#170390;
 background-color:#f8f9fa;
-  
+
 }
 
 #submitButtonHome{
@@ -240,17 +240,17 @@ input:-moz-placeholder {
   margin-top: 3%;
   width: 42%;
   padding: 10px;
-  
-   
+
+
 }
 
 /* Clear floats after the columns */
 .row {
-  
+
   display: table;
   clear: both;
   display: -ms-flexbox;
- 
+
 
 }
 
@@ -274,12 +274,12 @@ hr.style-four {
 
 
 #box{
-  
+
   margin-left: 20px;
   text-decoration: none;
   background: transparent;
   border-radius:3px;
-  transition:.2s all; 
+  transition:.2s all;
 }
 #box-wrap:hover #box{
   filter:blur(3px);
@@ -419,8 +419,8 @@ hr.style-four {
 label {
     width: 150px;
     display: inline-block;
-    
-  } 
+
+  }
 
   .nav-pills .nav-link.active, .nav-pills .show>{
     color: #fff;
@@ -431,5 +431,10 @@ label {
 }
 
 
-/****************************Sign UP Form Style**********************************************************/
+.style_image {
+	width: 100%;
+	height: 180px;
+}
 
+
+/****************************Sign UP Form Style**********************************************************/
