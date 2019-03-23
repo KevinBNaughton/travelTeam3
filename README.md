@@ -35,3 +35,23 @@ If the test suite passes, you'll be ready to run the app in a local server:
 ```
 $ rails server
 ```
+
+# To Update Git easily...
+
+```
+git add .
+git commit -m "Message"
+git pull origin master
+git status
+```
+
+Here make sure all merge conflicts are fixed
+
+```
+git add .
+git commit -m "Merge fixed!"
+git pull origin master
+git push origin master
+```
+
+All done!
