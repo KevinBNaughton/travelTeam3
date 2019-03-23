@@ -1,7 +1,8 @@
+<% provide(:title, "Home") %>
 <!DOCTYPE html>
 <html>
 <head>
-
+<title><%= yield(:title) %> | Travel Team 3</title>
 <script type="text/javascript" src ="AP.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="AP.css">
@@ -391,7 +392,7 @@
 <aside>
   <div class="jumbotron2">
     <h1 class="display-4">DEALS</h1>
-    
+
     <div id="post_deals" class="card" >
         <img class="card-img-top" src="http://www.ricardobofill.es/wp-content/uploads//2016/03/W_Barcelona_Hotel_Ricardo_Bofill_Taller_Arquitectura_Barcelona_Spain_01.jpg" style="width:100%; height: 180px">
         <div id="info_deals" class="card-body">
@@ -447,11 +448,15 @@
 <div style="width: 75%">
 
   <div id="post" class="card" >
-    <img class="card-img-top" src="https://www.incimages.com/uploaded_files/image/work-vacation-policy-pop_3122.jpg" alt="Card image" style="width:100%;height: 180px">
-    <div id="info" class="card-body">
-      <h4 class="card-title">Varadero</h4>
-      <p class="card-text"></p>
-      <h3 >From $299</h3>
+    <div alt="Card image">
+      <%= link_to post_path do %>
+         <%= image_tag 'https://www.incimages.com/uploaded_files/image/work-vacation-policy-pop_3122.jpg', :class => "style_image card-img-top" %>
+      <div id="info" class="card-body">
+        <h4 class="card-title">Varadero</h4>
+        <p class="card-text"></p>
+        <h3>From $299</h3>
+      </div>
+      <% end %>
     </div>
   </div>
 
@@ -611,7 +616,7 @@
 
 
 
-  
+
 
 </div>
 
