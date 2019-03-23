@@ -6,12 +6,210 @@
   </head>
   <body>
     <%= render 'layouts/header' %>
-    <div class="center jumbotron">
-      <h1>Travel Page Admin</h1>
+   
 
-      <p>
-        This is the admin page for the Travel Project Team 3
-      </p>
+
+    <div class="container" >
+
+      <div style=" font-size: xx-large; margin-top: 3%;text-align: -webkit-center; " >
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" style="width: 370px;">
+
+          <li class="nav-item">
+           <a style="height: 55px;font-size: smaller;" class="nav-link active" id="pills-hotel-tab" data-toggle="pill" href="#pills-hotel" role="tab" aria-controls="pills-contact" aria-selected="true">Hotel</a>
+          </li>
+
+          <li class="nav-item">
+            <a style="height: 55px;font-size: smaller;" class="nav-link " id="pills-cruise-tab" data-toggle="pill" href="#pills-cruise" role="tab" aria-controls="pills-contact" aria-selected="false">Cruises</a>
+          </li>
+
+          <li class="nav-item">
+            <a style="height: 55px;font-size: smaller;" class="nav-link " id="pills-packages-tab" data-toggle="pill" href="#pills-packages" role="tab" aria-controls="pills-contact" aria-selected="false">Packages</a>
+          </li>
+        </ul>
+      </div>
+
     </div>
+
+    <hr style=" color: navy;" >
+
+
+    <div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-hotel" role="tabpanel" aria-labelledby="pills-hotel-tab">
+
+
+<!-- HOTEL -->
+    <form>
+      <div class="container">
+
+        <label>LOCATION</label><input type="Price" class="form-control" placeholder="ex: New York" style=" width: 70%;margin-top: 2%; display: table-row;"><br>
+        <label>PICTURE</label><input type="UL" class="form-control" placeholder="ex: https://www.image.png" style=" width: 70%; display: table-row;"><br>
+        <label>PRICE</label><input type="Price" class="form-control" placeholder="ex: $199" style=" width: 70%; display: table-row;"><br>
+        <label>DETAILS</label><input type="tex-box" class="form-control" placeholder="Insert specific details about this POST" style=" width: 70%; display: table-row;"><br>
+
+       <div class="jumbotron_fluid">
+          <div style="padding-left: 60px;" >
+              <div class="form_check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Breakfast included</label>
+                  </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Swimming pool</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Free WiFi</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Fitness center</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Free parking</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Bar</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Non-smoking rooms</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Restaurant</label>
+                </div>
+          </div>
+        </div>
+
+
+        <label>CHECK IN</label><input type="date" class="form-control" placeholder="Insert check in date" style=" width: 70%; display: table-row;"><br>
+        <label>CHECK OUT</label><input type="date" class="form-control" placeholder="Insert check out date" style=" width: 70%; display: table-row;"><br>
+        <label>ROOMS</label><input type="number" class="form-control" placeholder="Insert how many Rooms" style=" width: 70%; display: table-row;"><br>
+
+      </div>
+    </form>
+ 
+  </div>
+  <div class="tab-pane fade" id="pills-cruise" role="tabpanel" aria-labelledby="pills-cruise-tab">
+    
+<!-- CRUISES -->
+    <form>
+      <div class="container">
+
+        <label>DESTINATION</label><input type="Price" class="form-control" placeholder="ex: Bahamas" style=" width: 70%;margin-top: 2%; display: table-row;"><br>
+        <label>PICTURE</label><input type="UL" class="form-control" placeholder="ex: https://www.image.png" style=" width: 70%; display: table-row;"><br>
+        <label>PRICE</label><input type="Price" class="form-control" placeholder="ex: $199" style=" width: 70%; display: table-row;"><br>
+        <label>DETAILS</label><input type="tex-box" class="form-control" placeholder="Insert specific details about this POST" style=" width: 70%; display: table-row;"><br>
+
+     	<div class="jumbotron_fluid">
+          <div style="padding-left: 60px;" >
+              <div class="form_check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">All meals included</label>
+                  </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Swimming pool</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Free WiFi</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Fitness center</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Drink packages</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Bar & Club</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Non-smoking rooms</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Game room</label>
+                </div>
+          </div>
+        </div>
+        <label>DEPARTURE</label><input type="date" class="form-control" placeholder="Insert check in date" style=" width: 70%; display: table-row;"><br>
+        <label>ARRIVAL</label><input type="date" class="form-control" placeholder="Insert check out date" style=" width: 70%; display: table-row;"><br>
+        <label>ROOMS</label><input type="number" class="form-control" placeholder="Insert how many Rooms" style=" width: 70%; display: table-row;"><br>
+
+      </div>
+    </form>
+  </div>
+  <div class="tab-pane fade" id="pills-packages" role="tabpanel" aria-labelledby="pills-packages-tab">
+    
+<!-- PACKAGES -->
+
+    <form>
+      <div class="container">
+
+        <label>LOCATION</label><input type="Price" class="form-control" placeholder="ex: New York" style=" width: 70%;margin-top: 2%; display: table-row;"><br>
+        <label>PICTURE</label><input type="UL" class="form-control" placeholder="ex: https://www.image.png" style=" width: 70%; display: table-row;"><br>
+        <label>PRICE</label><input type="Price" class="form-control" placeholder="ex: $199" style=" width: 70%; display: table-row;"><br>
+        <label>DETAILS</label><input type="tex-box" class="form-control" placeholder="Insert specific details about this POST" style=" width: 70%; display: table-row;"><br>
+
+        <div class="jumbotron_fluid">
+          <div style="padding-left: 60px;" >
+              <div class="form_check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Breakfast included</label>
+                  </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Swimming pool</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Free WiFi</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Fitness center</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Free parking</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Bar</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Non-smoking rooms</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Restaurant</label>
+                </div>
+          </div>
+        </div>
+
+
+        <label>CHECK IN</label><input type="date" class="form-control" placeholder="Insert check in date" style=" width: 70%; display: table-row;"><br>
+        <label>CHECK OUT</label><input type="date" class="form-control" placeholder="Insert check out date" style=" width: 70%; display: table-row;"><br>
+        <label>ROOMS</label><input type="number" class="form-control" placeholder="Insert how many Rooms" style=" width: 70%; display: table-row;"><br>
+
+      </div>
+    </form>
+
+  </div>
+</div>
+
+  
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
   </body>
 </html>

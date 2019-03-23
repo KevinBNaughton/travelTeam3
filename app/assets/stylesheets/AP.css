@@ -394,6 +394,42 @@ hr.style-four {
     margin-top: -9px;
 }
 
+.form_check {
+    position: relative;
+    display: inline-flex;
+    padding-left: 1.25rem;
+    width: 150px;
+    margin-left: 25px;
+    width: 200px;
+  }
+
+    .jumbotron_fluid {
+    height: 125px;
+    display: table;
+    width: 70%;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 150px;
+    background: #e9ecef;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+label {
+    width: 150px;
+    display: inline-block;
+    
+  } 
+
+  .nav-pills .nav-link.active, .nav-pills .show>{
+    color: #fff;
+    background-color: #007bff;
+    width: 155px;
+    text-align: center;
+    padding-top: 10px;
+}
+
 
 /****************************Sign UP Form Style**********************************************************/
 

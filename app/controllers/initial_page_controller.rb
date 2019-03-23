@@ -7,4 +7,7 @@ class InitialPageController < ApplicationController
 
   def admin
   end
+
+  def post
+  end
 end
