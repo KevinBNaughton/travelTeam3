@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'blog/new'
+
   root 'initial_page#home'
   get '/home',  to: 'initial_page#home'
   get '/contact',  to: 'initial_page#contact'

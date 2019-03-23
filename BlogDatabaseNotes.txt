@@ -79,3 +79,21 @@ t.string :hotelDetails
 t.string :specialName
 t.integer :specialPrice
 t.string :specialDetails
+
+
+
+
+
+
+
+rake db:migrate
+rails test
+
+
+
+
+
+git add .
+git commit -m "Say something here"
+git pull origin master
+git status
