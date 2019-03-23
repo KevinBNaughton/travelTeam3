@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'blogs/new'
+
   get 'blog/new'
 
   root 'initial_page#home'
