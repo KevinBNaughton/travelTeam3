@@ -1,3 +1,197 @@
+<<<<<<< HEAD
+#mainImage {
+	height: 500px;
+    width: 100%;
+	background-size: cover ;
+	background-position: center;
+	background-repeat: no-repeat;
+	size: 60%;
+	margin-top: 5px;
+
+}
+#Login {
+  margin-right: 3px;
+  color: black;
+  border-style: none;
+  font-family: normal;
+}
+
+.nav-tabs {
+
+
+}
+
+#submitButtonHome{
+  
+  float:right
+}
+
+#guest {
+  
+  width: 270px;
+}
+
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: navy;
+    font-size: initial;
+}
+#jumbtr1 {
+  
+  position:static;
+  margin-top: -0.35%;
+  margin-left: 0%;
+  padding-top: 18px;
+  width: 100%;
+  opacity: 0.9;
+  background-color: ivory;
+
+  }
+
+.cf {
+  position:relative;
+  height:281px;
+  width:200px;
+  margin:0 auto;
+
+}
+
+.cf img {
+  position:absolute;
+  width: 100%;
+  height: 451px;
+  margin-left: 0px;
+ 
+ 
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+@keyframes cf3FadeInOut {
+  0% {
+  opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+
+.cf img.top {
+animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 15s;
+animation-direction: alternate;
+
+}
+
+.bg-light {
+    
+}
+
+
+img.photos {
+	
+	width: 31.3%;
+	float: left;
+	margin:1%;
+	height: 187px;
+
+}
+
+aside {
+    width: 22%;
+    margin-top: 0.6em;
+    margin-right: 1.6em;
+    margin-left: 1px;
+    float: right;
+    font-style: italic;
+    color: #29627e;
+}
+
+#photosdiv {
+	width: 75%;
+	}
+
+
+
+input:-ms-input-placeholder {
+  color: red;
+  font-style: italic;
+}
+
+input:-moz-placeholder {
+  color: red;
+  font-style: italic;
+}input:placeholder-shown {
+  color: red;
+  font-style: italic;
+}
+
+  input[type="date"]:before {
+    content: attr(placeholder) !important;
+    color: #aaa;
+    margin-right: 0.5em;
+  }
+  input[type="date"]:focus:before,
+  input[type="date"]:valid:before {
+    content: "";
+  }
+
+
+ hr { 
+ border: 0; 
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+ 
+}
+
+#test {
+  text-align: center;
+  height: 40px;
+  list-style-type: none;
+  position: sticky;
+}
+
+.wrapper {
+  display: flex;
+ float: right;
+  height: 100vh;
+  font-size: 10px;
+}
+
+.wrapper i {
+  padding: 10px;
+  text-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
+  transition: all ease-in-out 150ms;
+}
+.wrapper a:nth-child(1) {
+  color: #dd4b39;
+}
+.wrapper a:nth-child(2) {
+  color: #4867AA;
+}
+.wrapper a:nth-child(3) {
+  color: #1DA1F2;
+}
+.wrapper a:hover {
+  margin-top: -3px;
+  text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.4);
+}
+=======
 #mainImage {
 	height: 500px;
     width: 100%;
@@ -226,6 +420,7 @@ input:-moz-placeholder {
   margin-top: -3px;
   text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.4);
 }
+<<<<<<< HEAD
 
 
 * {
@@ -433,3 +628,6 @@ label {
 
 /****************************Sign UP Form Style**********************************************************/
 
+=======
+>>>>>>> 9451ea6b58602d8f26e2f0b97aa6ee92ef138937
+>>>>>>> 1512f2470ca6e1cd0f8a5e9dd6de7df6eabca6fa
