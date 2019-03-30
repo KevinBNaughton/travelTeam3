@@ -55,3 +55,12 @@ git push origin master
 ```
 
 All done!
+
+# To Pull updates...
+
+```
+git pull origin master
+rake db:migrate
+```
+
+Make sure to rake db:migrate after you fix merge errors!
