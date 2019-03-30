@@ -80,7 +80,7 @@ background-color:#f8f9fa;
   margin-left: 0%;
   padding-top: 18px;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.92;
   background-color: ivory;
 
   }
@@ -436,5 +436,31 @@ label {
 	height: 180px;
 }
 
+/*  Typewriter styling  */
+.typestyleall {
+	color: #000000;
+  font-family: "gira-sans";
+  /*font-size: 30px;*/
+	font-size: 2.5vw;
+  font-weight: 700;
+  letter-spacing: 1.87px;
+  line-height: 112px;
+  width: 100%;
+	padding-left: 5%;
+  /*max-width: 800px;
+  margin-left: 10px;*/
+  margin-bottom: 0.7em;
+  position: relative;
+  z-index: 3;
+	display: inline-block;
+}
+.typestyle {
+	padding-left: 0%;
+  text-decoration: underline;
+	text-align: center;
+	color: #2831ff;
+	position: relative;
+	/*margin-left: 5px;*/
+}
 
 /****************************Sign UP Form Style**********************************************************/

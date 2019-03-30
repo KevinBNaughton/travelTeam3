@@ -3,7 +3,7 @@ require 'test_helper'
 class InitialPageControllerTest < ActionDispatch::IntegrationTest
 
   def setup
-    @base_title = "Travel Team 3"
+    @base_title = "Bochitto Travel"
   end
 
   test "should get root" do

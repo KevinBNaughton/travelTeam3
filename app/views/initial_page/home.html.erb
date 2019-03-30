@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title><%= yield(:title) %> | Travel Team 3</title>
+<title><%= yield(:title) %> | Bochitto Travel</title>
 <script type="text/javascript" src ="AP.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="AP.css">
@@ -24,18 +24,13 @@
 <body>
   <%= render 'layouts/header' %>
 
-  <h1>
-    <a class="typewrite" data-period="2000" data-type='[ "Create", "Travel", "Explore", "Plan" ]'>
-      <span class="wrap"></span>
-    </a>
-  </h1>
 <!--
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand" href="#"><%= image_tag "final.png" %></a>
+    <a class="navbar-brand" href="#">< %= image_tag "final.png" %></a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -78,8 +73,20 @@
 </ul>
 </div>
 
+<div class="container" style="padding-top: 5%">
+  <div id="jumbtr1" class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="align-items-center" style="margin-top: 20px;">
+        <h1 class="typestyleall">
+          Welcome to Bochitto Travel, where you can
+          <span class="typewrite typestyle" data-period="1500" data-type='[ "create.", "adventure.", "plan.", "explore.", "travel." ]'></span>
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
 
-
+<!--
 <nav>
   <div class="container" style="padding-top: 5%">
   <div style="position: relative;" class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -96,7 +103,7 @@
 
   <div class="tab-content" id="nav-tabContent">
 
-    <!-- FLIGHTS_TAB -->
+    <!-- FLIGHTS_TAB --> <!--
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
       <div class="container">
       <form>
@@ -201,7 +208,7 @@
 
       </div>
     </div>
-    <!-- HOTELS_TAB-->
+    <!-- HOTELS_TAB--> <!--
     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
       <div class="container">
 
@@ -290,7 +297,7 @@
     </div>
 
 
-    <!-- CRUISES_TAB -->
+    <!-- CRUISES_TAB --> <!--
     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
 
       <div class="container">
@@ -387,7 +394,10 @@
   </div>
   </div>
 </div>
-</nav>
+</nav> -->
+
+
+
 </div>
 
 <hr>
