@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'users/new'
+  #get 'users/new'
 
-  get 'blogs/new'
+  #get 'blogs/new'
 
   root 'initial_page#home'
   get '/home',  to: 'initial_page#home'
