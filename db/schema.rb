@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20190323191206) do
     t.string "specialName"
     t.integer "specialPrice"
     t.string "specialDetails"
+    t.boolean "postFacebook"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
