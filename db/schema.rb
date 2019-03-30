@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190323191206) do
+ActiveRecord::Schema.define(version: 20190330182503) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "name"
@@ -31,8 +31,12 @@ ActiveRecord::Schema.define(version: 20190323191206) do
     t.integer "specialPrice"
     t.string "specialDetails"
     t.boolean "postFacebook"
+    t.integer "yooo"
+    t.string "andMe"
+    t.string "testing2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["specialName"], name: "index_blogs_on_specialName", unique: true
   end
 
 end
