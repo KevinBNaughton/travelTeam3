@@ -1,7 +1,7 @@
 class Blog < ApplicationRecord
 
-  validates :name, presence:true
-  validates :starDate
+  validates :name
+  validates :startDate
   validates :endDate
   validates :overallPrice
   validates :numberAdults
