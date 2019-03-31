@@ -1,4 +1,4 @@
-<% provide(:title, "Sign Up") %>
+<% provide(:title, "Log In") %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,12 +11,8 @@
 
 <body>
   <%= render 'layouts/header' %>
-  <%= form_for(@user, url: signup_path) do |f| %>
-  <h2>Please Sign Up</h2>
-  <p>
-    <%= f.label :name, "Name", class: "sr-only" %><br>
-    <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
-  </p>
+  <%= form_for(:session, url: login_path) do |f| %>
+  <h2>Please Log In</h2>
   <p>
     <%= f.label :email, "Email", class: "sr-only" %><br>
     <%= f.email_field :email, class: "form-control", placeholder: "Email" %>
@@ -30,9 +26,9 @@
   <input type="checkbox" value="remember-me"> Remember me
   </label>
   </div> -->
-    <%= f.submit "Click to Sign Up", class: "btn btn-lg btn-primary btn-block" %>
+    <%= f.submit "Log In", class: "btn btn-primary btn-block" %>
   <% end %>
-  <p>Already Registered? <%= link_to "Log in now!", login_path %></p>
+  <p>New User? <%= link_to "Sign up now!", signup_path %></p>
   <%= render 'layouts/footer' %>
 </body>
 </html>
