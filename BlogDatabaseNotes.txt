@@ -97,3 +97,29 @@ git add .
 git commit -m "Say something here"
 git pull origin master
 git status
+
+
+
+
+rails console
+Users.all
+exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+In view users has new that is sign up page
+in views sessions new is login page
+in controllers users controller has new for the page
+create is creating new user
+controller sessions this is the log in functions
+everything back to routes
