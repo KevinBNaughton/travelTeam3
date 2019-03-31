@@ -3,7 +3,7 @@ class CreateBlogs < ActiveRecord::Migration[5.1]
     create_table :blogs do |t|
 
 #basic info. Every post needs these
-      t.string :tripName
+      t.string :name
       t.date :startDate
       t.date :endDate
       t.integer :overallPrice
