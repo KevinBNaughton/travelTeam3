@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'request/new'
+
   #get 'sessions/new'
 
   resources :users
@@ -15,7 +17,9 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   get    '/admin/post', to: 'blogs#new'
-  post    '/admin/post', to: 'blogs#new'
+  post    '/admin/post', to: 'blogs#create'
+  get    '/admin', to: 'blogs#new'
+  post    '/admin', to: 'blogs#create'
 
   resources :blogs
 
