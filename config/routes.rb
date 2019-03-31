@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
+  #get 'sessions/new'
 
   resources :users
-  get 'blogs/new'
+  #get 'blogs/new'
 
   root 'initial_page#home'
   get '/home',  to: 'initial_page#home'
@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+  get    '/admin/post', to: 'blogs#new'
+  post    '/admin/post', to: 'blogs#new'
 
   resources :blogs
 
