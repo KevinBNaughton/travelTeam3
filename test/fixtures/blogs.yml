@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  tripName: MyString
+  name: MyString
   startDate: 2019-03-23
   endDate: 2019-03-23
   overallPrice: 1
@@ -20,7 +20,7 @@ one:
   specialDetails: MyString
 
 two:
-  tripName: MyString
+  name: MyString
   startDate: 2019-03-23
   endDate: 2019-03-23
   overallPrice: 1

@@ -1,7 +1,7 @@
 class Blog < ApplicationRecord
 
 #overall details
-  validates :tripName,
+  validates :name,
             presence:true
   validates :overallPrice,
             presence:true,
