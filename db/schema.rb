@@ -13,31 +13,24 @@
 ActiveRecord::Schema.define(version: 20190330184911) do
 
   create_table "blogs", force: :cascade do |t|
-    t.string "tripName"
+    t.string "name"
     t.date "startDate"
     t.date "endDate"
     t.integer "overallPrice"
     t.integer "numberAdults"
     t.integer "numberChildren"
     t.string "overallDetails"
-    t.string "origin"
-    t.string "destination"
-    t.boolean "flight"
     t.integer "flightPrice"
     t.string "flightDetails"
-    t.boolean "cruise"
     t.integer "cruisePrice"
     t.string "cruiseDetails"
-    t.boolean "hotel"
     t.integer "hotelPrice"
     t.integer "hotelBeds"
     t.string "hotelDetails"
-    t.boolean "special"
     t.string "specialName"
     t.integer "specialPrice"
     t.string "specialDetails"
     t.boolean "postFacebook"
-    t.boolean "package"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   get '/contact',  to: 'initial_page#contact'
   get '/admin',  to: 'initial_page#admin'
   get '/post',   to: 'initial_page#post'
-  #resources: :blog
+  get '/adminP', to: 'blogs#new'
+  post '/adminP', to: 'blogs#create'
+
+  resources :blog
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
