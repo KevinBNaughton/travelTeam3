@@ -1,2 +1,63 @@
-<h1>Blogs#new</h1>
-<p>Find me in app/views/blogs/new.html.erb</p>
+<%= form_for(:blog,url: admin_path) do |f| %>
+  <div class="container">
+
+  <%= f.label :name %>
+  <!-- < %= f.select :name, ['Flight','Cruise','Hotel','Package'],class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br> -->
+  <%= f.text_field :name, class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
+  <%= f.label :origin %>
+  <%= f.text_field :origin, placeholder: "ex: New York", class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
+  <%= f.label :destination %>
+  <%= f.text_field :destination, placeholder: "ex: Miami", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+  <%= f.label :overallPrice %>
+  <%= f.text_field :overallPrice, placeholder: "ex: $199", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+  <%= f.label :startDate %>
+  <%= f.date_field :startDate, placeholder: "Insert check in date", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+  <%= f.label :endDate %>
+  <%= f.date_field :endDate, placeholder: "Insert check out date", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+  <%= f.label :overallDetails %>
+  <%= f.text_field :overallDetails, placeholder: "Extra details", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+
+    <label>PICTURE</label><input type="UL" class="form-control" placeholder="ex: https://www.image.png" style=" width: 70%; display: table-row;"><br>
+   <div class="jumbotron_fluid">
+      <div style="padding-left: 60px;" >
+          <div class="form_check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Breakfast included</label>
+              </div>
+            <div class="form_check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Swimming pool</label>
+            </div>
+            <div class="form_check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Free WiFi</label>
+            </div>
+            <div class="form_check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Fitness center</label>
+            </div>
+            <div class="form_check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Free parking</label>
+            </div>
+            <div class="form_check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Bar</label>
+            </div>
+            <div class="form_check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Non-smoking rooms</label>
+            </div>
+            <div class="form_check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Restaurant</label>
+            </div>
+      </div>
+    </div>
+
+
+<%= f.submit "Submit Post", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190331034948) do
+ActiveRecord::Schema.define(version: 20190331202541) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "name"
@@ -38,6 +38,19 @@ ActiveRecord::Schema.define(version: 20190331034948) do
     t.string "specialDetails"
     t.boolean "postFacebook"
     t.boolean "package"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.date "startDate"
+    t.date "endDate"
+    t.integer "overallPrice"
+    t.integer "numberAdults"
+    t.integer "numberChildren"
+    t.string "overallDetails"
+    t.string "origin"
+    t.string "destination"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

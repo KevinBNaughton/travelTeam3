@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'request/new'
+
   #get 'sessions/new'
 
   resources :users
