@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20190401211527) do
   end
 
   create_table "requests", force: :cascade do |t|
+    t.string "userName"
     t.date "startDate"
     t.date "endDate"
     t.integer "overallPrice"

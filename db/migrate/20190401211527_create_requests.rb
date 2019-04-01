@@ -3,6 +3,7 @@ class CreateRequests < ActiveRecord::Migration[5.1]
     create_table :requests do |t|
 
 #basic info. Every post needs these
+    t.string :userName
     t.date :startDate
     t.date :endDate
     t.integer :overallPrice

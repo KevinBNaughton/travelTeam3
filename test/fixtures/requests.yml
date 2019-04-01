@@ -5,6 +5,7 @@
 # below each fixture, per the syntax in the comments below
 #
 one:
+  userName: MyString
   startDate: 2019-04-01
   endDate: 2019-04-01
   overallPrice: 1
@@ -15,6 +16,7 @@ one:
   destination: MyString
 
 two:
+  userName: MyString
   startDate: 2019-04-01
   endDate: 2019-04-01
   overallPrice: 1
