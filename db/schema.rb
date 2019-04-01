@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 20190401211527) do
 
   create_table "blogs", force: :cascade do |t|
+    t.string "image_url"
     t.string "name"
     t.date "startDate"
     t.date "endDate"
@@ -38,6 +39,13 @@ ActiveRecord::Schema.define(version: 20190401211527) do
     t.string "specialDetails"
     t.boolean "postFacebook"
     t.boolean "package"
+    t.boolean "breakfast"
+    t.boolean "fitness"
+    t.boolean "smoking"
+    t.boolean "swimming"
+    t.boolean "parking"
+    t.boolean "wifi"
+    t.boolean "bar"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -2,6 +2,9 @@ class CreateBlogs < ActiveRecord::Migration[5.1]
   def change
     create_table :blogs do |t|
 
+#url for the image
+      t.string :image_url
+
 #basic info. Every post needs these
       t.string :name
       t.date :startDate
@@ -34,6 +37,16 @@ class CreateBlogs < ActiveRecord::Migration[5.1]
 
       t.boolean :postFacebook
       t.boolean :package
+
+
+#booleans for checkboxes on admin page
+      t.boolean :breakfast
+      t.boolean :fitness
+      t.boolean :smoking
+      t.boolean :swimming
+      t.boolean :parking
+      t.boolean :wifi
+      t.boolean :bar
 
       t.timestamps
     end
