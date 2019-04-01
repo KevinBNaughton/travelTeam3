@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
   get    '/admin', to: 'blogs#new'
   post    '/admin', to: 'blogs#create'
-  get   '/blogs', to: 'blogs#index'
+  #get   '/blogs', to: 'blogs#index'
 
   resources :blogs
 

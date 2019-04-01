@@ -8,9 +8,9 @@ class BlogsController < ApplicationController
     @blog = Blog.find(params[:id])
   end
 
-  #def index
-  #  @blogs = Blog.all
-  #end
+  def index
+    @blogs = Blog.all
+  end
 
   def create
     @blog = Blog.new(blog_params)
