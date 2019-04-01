@@ -1,5 +1,6 @@
 class InitialPageController < ApplicationController
   def home
+    @blogs = Blog.all
   end
 
   def contact
@@ -10,4 +11,7 @@ class InitialPageController < ApplicationController
 
   def post
   end
+
+
+
 end

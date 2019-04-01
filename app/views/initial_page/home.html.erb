@@ -3,9 +3,9 @@
 <html>
 <head>
 <title><%= yield(:title) %> | Bochitto Travel</title>
-<script type="text/javascript" src ="AP.js"></script>
+<script type="text/javascript" src ="/assests/AP.js"></script>
+<link rel="stylesheet" type="text/css" href="/assests/AP.css" />
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="AP.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!--<link rel="shortcut icon" href="file:///C:/Users/Stalim/Downloads/favicon%20(6).ico" /> -->
 
@@ -404,7 +404,7 @@
 
 
 <!-- DEALS SECTION  -->
-
+<!--
 <aside>
   <div class="jumbotron2">
     <h1 class="display-4">DEALS</h1>
@@ -457,22 +457,35 @@
 
   </div>
 </aside>
-
+-->
 <!-- POSTS MAIN TAB -->
 
 
 <div style="width: 75%">
 
+  <% @blogs.each do |blog| %>
+  <div id="post" class="card" >
+    <img class="card-img-top" src="https://www.incimages.com/uploaded_files/image/work-vacation-policy-pop_3122.jpg" style="width:100%; height: 180px">
+      <div id="info" class="card-body">
+        <h4 class="card-title"><%= blog.destination %></h4>
+        <p class="card-text"></p>
+        <h3>From $<%= blog.overallPrice %></h3>
+      </div>
+    </div>
+  </div>
+  <% end %>
+
+<!--
   <div id="post" class="card" >
     <div alt="Card image">
-      <%= link_to post_path do %>
-         <%= image_tag 'https://www.incimages.com/uploaded_files/image/work-vacation-policy-pop_3122.jpg', :class => "style_image card-img-top" %>
+      < %= link_to post_path do %>
+        < %= image_tag 'https://www.incimages.com/uploaded_files/image/work-vacation-policy-pop_3122.jpg', :class => "style_image card-img-top" %>
       <div id="info" class="card-body">
         <h4 class="card-title">Varadero</h4>
         <p class="card-text"></p>
         <h3>From $299</h3>
       </div>
-      <% end %>
+      < % end %>
     </div>
   </div>
 
@@ -630,7 +643,7 @@
     </div>
   </div>
 
-
+-->
 
 
 
