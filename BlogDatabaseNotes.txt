@@ -1,0 +1,133 @@
+#blogSchema
+
+CREATE TABLE blogs
+(
+
+
+  name:
+  {
+    type: String,
+    required: true    //do required in html
+  },
+  ID:
+  {
+    type: Number,
+    required: true
+  },
+  startDate:
+  endDate:
+  overallPrice:
+  {
+    type: Number,
+    required: true
+  },
+  numberAdults: Number,
+  numberChildren: Number,
+  overallDetails: String,
+  flight:
+  {
+    price: Number,
+    depart:
+    arrive:
+    details:
+  },
+  cruise:
+  {
+    price: Number,
+    portLeaving: String,
+    portVisiting: String,
+    details: String,
+  },
+  hotel:
+  {
+    price: Number,
+    checkIn: String,
+    checkOut: String,
+    beds: Number,
+    details: String
+  },
+  other:
+  {
+    name: String,
+    price: Number,
+    details: String
+  }
+
+
+)
+
+
+
+
+
+
+t.string :Name
+t.integer :ID
+t.date :startDate
+t.date :endDate
+t.integer :overallPrice
+t.integer :numberAdults
+t.integer :numberChildren
+t.string :overallDetails
+t.integer :flightPrice
+t.string :flightDetails
+t.integer :cruisePrice
+t.string :cruiseDetails
+t.integer :hotelPrice
+t.integer :hotelBeds
+t.string :hotelDetails
+t.string :specialName
+t.integer :specialPrice
+t.string :specialDetails
+
+
+
+
+
+
+
+rake db:migrate
+rails test
+
+
+
+
+
+git add .
+git commit -m "Say something here"
+git pull origin master
+git status
+
+
+
+
+rails console
+Users.all
+exit
+
+
+
+
+
+#basic info. Every post needs these
+    t.date :startDate
+    t.date :endDate
+    t.integer :overallPrice
+    t.integer :numberAdults
+    t.integer :numberChildren
+    t.string :overallDetails
+    t.string :origin
+    t.string :destination
+
+
+
+
+
+
+
+In view users has new that is sign up page
+in views sessions new is login page
+in controllers users controller has new for the page
+create is creating new user
+controller sessions this is the log in functions
+everything back to routes

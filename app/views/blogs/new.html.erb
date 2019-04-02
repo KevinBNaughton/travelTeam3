@@ -1,0 +1,58 @@
+<%= form_for(:blog,url: admin_path) do |f| %>
+<div class="container">
+
+  <%= f.label :name %>
+  <%= f.select :name, ['Flight','Cruise','Hotel','Package'],class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
+  <!--  < %= f.text_field :name, class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br> -->
+  <%= f.label :origin %>
+  <%= f.text_field :origin, placeholder: "ex: New York", class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
+  <%= f.label :destination %>
+  <%= f.text_field :destination, placeholder: "ex: Miami", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+  <%= f.label :overallPrice %>
+  <%= f.text_field :overallPrice, placeholder: "ex: $199", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+  <%= f.label :startDate %>
+  <%= f.date_field :startDate, placeholder: "Insert check in date", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+  <%= f.label :endDate %>
+  <%= f.date_field :endDate, placeholder: "Insert check out date", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+  <%= f.label :overallDetails %>
+  <%= f.text_field :overallDetails, placeholder: "Extra details", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+
+  <div class="jumbotron_fluid">
+    <div style="padding-left: 60px;" >
+      <div class="form_check">
+        <%= f.label :breakfast %>
+        <%= f.check_box :breakfast, class:"form-check-input", id: "exampleCheck1" %>
+      </div>
+      <div class="form_check">
+        <%= f.label :swimming %>
+        <%= f.check_box :swimming, class:"form-check-input", id: "exampleCheck1" %>
+      </div>
+      <div class="form_check">
+        <%= f.label :wifi %>
+        <%= f.check_box :wifi, class:"form-check-input", id: "exampleCheck1" %>
+      </div>
+      <div class="form_check">
+        <%= f.label :fitness %>
+        <%= f.check_box :fitness, class:"form-check-input", id: "exampleCheck1" %>
+      </div>
+      <div class="form_check">
+        <%= f.label :parking %>
+        <%= f.check_box :parking, class:"form-check-input", id: "exampleCheck1" %>
+      </div>
+      <div class="form_check">
+        <%= f.label :bar %>
+        <%= f.check_box :bar, class:"form-check-input", id: "exampleCheck1" %>
+      </div>
+      <div class="form_check">
+        <%= f.label :smoking %>
+        <%= f.check_box :smoking, class:"form-check-input", id: "exampleCheck1" %>
+      </div>
+    </div>
+  </div>
+
+
+  <%= f.submit "Submit Post", class: "btn btn-primary" %>
+</div>
+<% end %>
+
+</div>

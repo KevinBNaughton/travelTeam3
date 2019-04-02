@@ -1,12 +1,82 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%= link_to "travelTeam3", root_path %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Contact", contact_path %></li>
-        <li><%= link_to "Admin", admin_path %></li>
+<header>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a><%= link_to image_tag("m.png",width: 140, alt: "Company logo"), root_path %></a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="box-wrap">
+        <li class="nav-item" id="box">
+          <%= link_to "Home", root_path, id: "logo" %>
+        </li>
+        <li class="nav-item" id="box">
+          <%= link_to "About Us", contact_path %>
+        </li>
+        <li class="nav-item" id="box">
+          <%= link_to "Admin", admin_path %>
+        </li>
       </ul>
-    </nav>
+
+      <% if logged_in? %>
+        <a class="form-inline my-2 my-lg-0" style="width: auto">
+          <%= link_to "Log out", logout_path, method: :delete %>
+        </a>
+      <% else %>
+        
+        <a  class="form-inline my-2 my-lg-0" style="width: auto">
+          <%= link_to "Sign up", signup_path, class: "sign_up" %>
+          <i style="margin-left: 5.5px;" class="fas fa-user-plus"></i>
+        </a>
+        
+        <a class="form-inline my-2 my-lg-0 " style="width: auto">
+          <%= link_to "Log in", login_path, class: "sign_up" %>
+          <i style="margin-left: 5.5px;margin-right: 40px;"class="fas fa-user"></i>
+        </a>
+        
+      <% end %>
+
+
+    </div>
+  </nav>
+</header>
+<!--
+<header>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand">< %= link_to "TravelTeam3", root_path %></a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active">< %= link_to "Home", root_path, id: "logo" %></li>
+        <li>< %= link_to "Contact", contact_path %></li>
+        <li>< %= link_to "Admin", admin_path %></li>
+      </ul>
+    </div>
+  </nav>
+</header> -->
+<!--<header class="ui secondary  menu">
+  <a class="item">
+    < %= link_to "Home", 'home' %>
+  </a>
+  <a class="item">
+    < %= link_to "Contact", 'contact' %>
+  </a>
+  <a class="item">
+    < %= link_to "Admin", 'admin' %>
+  </a>
+  <div class="right menu">
+    <div class="item">
+      <div class="ui icon input">
+        <input type="text" placeholder="Search...">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+    <a class="ui item active">
+      Logout
+    </a>
   </div>
 </header>
+-->

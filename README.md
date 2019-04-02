@@ -3,22 +3,64 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+## Getting started
 
-* Ruby version
+To get started with the app, clone the repo and then install the needed gems:
 
-* System dependencies
+```
+$ bundle install
+```
 
-* Configuration
+Next, migrate the database:
 
-* Database creation
+```
+$ rake db:migrate
+```
 
-* Database initialization
+Or if we need to update just development or test database,
 
-* How to run the test suite
+```
+$ rake db:migrate RAILS_ENV=test
+$ rake db:migrate RAILS_ENV=development
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Finally, run the test suite to verify that everything is working correctly:
 
-* Deployment instructions
+```
+$ rails test
+```
 
-* ...
+If the test suite passes, you'll be ready to run the app in a local server:
+
+```
+$ rails server
+```
+
+# To Update Git easily...
+
+```
+git add .
+git commit -m "Message"
+git pull origin master
+git status
+```
+
+Here make sure all merge conflicts are fixed
+
+```
+git add .
+git commit -m "Merge fixed!"
+git pull origin master
+git push origin master
+```
+
+All done!
+
+# To Pull updates...
+
+```
+git pull origin master
+rake db:migrate
+```
+
+Make sure to rake db:migrate after you fix merge errors!

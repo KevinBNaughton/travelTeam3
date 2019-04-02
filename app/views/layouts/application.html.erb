@@ -1,28 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Travel Team 3</title>
+    <title>Bochitto Travel</title>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "AP.css" %>
   </head>
 
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <%= link_to "Home Page", root_path, id: "logo" %>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home", root_path %></li>
-            <li><%= link_to "Contact", contact_path %></li>
-            <li><%= link_to "Admin", admin_path %></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <div class="container">
       <%= yield %>
-    </div>
+      <script type="text/javascript" src ="app/assets/AP.js"></script>
   </body>
 </html>

@@ -1,0 +1,37 @@
+<% provide(:title, "Sign Up") %>
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src ="/assests/AP.js"></script>
+  <link rel="stylesheet" type="text/css" href="/assests/AP.css" />
+  <title><%= yield(:title) %> | Bochitto Travel</title>
+
+</head>
+
+<body>
+  <%= render 'layouts/header' %>
+  <%= form_for(@user, url: signup_path) do |f| %>
+  <h2>Please Sign Up</h2>
+  <p>
+    <%= f.label :name, "Name", class: "sr-only" %><br>
+    <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
+  </p>
+  <p>
+    <%= f.label :email, "Email", class: "sr-only" %><br>
+    <%= f.email_field :email, class: "form-control", placeholder: "Email" %>
+  </p>
+  <p>
+    <%= f.label :password, class: "sr-only" %><br>
+    <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+  </p>
+  <!--  <div class="checkbox">
+  <label>
+  <input type="checkbox" value="remember-me"> Remember me
+  </label>
+  </div> -->
+    <%= f.submit "Click to Sign Up", class: "btn btn-lg btn-primary btn-block" %>
+  <% end %>
+  <p>Already Registered? <%= link_to "Log in now!", login_path %></p>
+  <%= render 'layouts/footer' %>
+</body>
+</html>

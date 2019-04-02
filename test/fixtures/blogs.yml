@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image_url: MyString
+  name: MyString
+  startDate: 2019-03-23
+  endDate: 2019-03-23
+  overallPrice: 1
+  numberAdults: 1
+  numberChildren: 1
+  overallDetails: MyString
+  origin: MyString
+  destination: MyString
+  flight: false
+  flightPrice: 1
+  flightDetails: MyString
+  cruise: false
+  cruisePrice: 1
+  cruiseDetails: MyString
+  hotel: false
+  hotelPrice: 1
+  hotelBeds: 1
+  hotelDetails: MyString
+  special: false
+  specialName: MyString
+  specialPrice: 1
+  specialDetails: MyString
+
+two:
+  image_url: MyString
+  name: MyString
+  startDate: 2019-03-23
+  endDate: 2019-03-23
+  overallPrice: 1
+  numberAdults: 1
+  numberChildren: 1
+  overallDetails: MyString
+  origin: MyString
+  destination: MyString
+  flight: false
+  flightPrice: 1
+  flightDetails: MyString
+  cruise: false
+  cruisePrice: 1
+  cruiseDetails: MyString
+  hotel: false
+  hotelPrice: 1
+  hotelBeds: 1
+  hotelDetails: MyString
+  special: false
+  specialName: MyString
+  specialPrice: 1
+  specialDetails: MyString

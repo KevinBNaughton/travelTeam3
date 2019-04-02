@@ -1,17 +1,539 @@
 <% provide(:title, "Home") %>
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= yield(:title) %> | Travel Team 3</title>
-  </head>
-  <body>
-    <%= render 'layouts/header' %>
-    <div class="center jumbotron">
-      <h1>Travel Page Home</h1>
+<head>
+<title><%= yield(:title) %> | Bochitto Travel</title>
+<script type="text/javascript" src ="/assests/AP.js"></script>
+<link rel="stylesheet" type="text/css" href="/assests/AP.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!--<link rel="shortcut icon" href="file:///C:/Users/Stalim/Downloads/favicon%20(6).ico" /> -->
 
-      <p>
-        This is the home page for the Travel Project Team 3
-      </p>
+
+<!-- semantic -->
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<src="https://code.jquery.com/jquery-3.1.1.min.js crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+
+<title>Travel-Business</title>
+
+</head>
+<body>
+  <%= render 'layouts/header' %>
+
+<!--
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="#">< %= image_tag "final.png" %></a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <button id="Login" type="button" class="btn btn-outline-primary"><i class="fas fa-user-plus"> Login</i></button>
+   		<button type="button" class="btn btn-outline-primary"><i class="fas fa-user"></i> Signup</button>
+   	    </form>
+  </div>
+</nav> -->
+<!-- <div><h1><i class="fab fa-twitter"></i></h1></div>
+
+	<i class="fas fa-user-plus"></i>
+	<i class="fas fa-user"></i>
+
+<span class="icons"><i class="fab fa-instagram"></i></span> -->
+
+<div id="mainImage" class="cf">
+
+
+
+
+  <img class="bottom"  src="https://disneyparksmomspanel.disney.go.com/Content/images/QImages/ab1dd622-b2e2-43c0-a180-c8d7703f89ac.jpg" />
+  <img  class="top"src="https://scontent-mia3-2.xx.fbcdn.net/v/t1.0-9/53155069_2235813123300317_3821106483400015872_o.jpg?_nc_cat=106&_nc_ht=scontent-mia3-2.xx&oh=7823ff1c971b9756644713d41fc4daa9&oe=5D1AB4B1">
+
+
+<div>
+<ul id="test" class="wrapper">
+  <a href="http://www.google.com"><i class="fab fa-3x fa-instagram"></i></a>
+  <a href="https://www.facebook.com/Travelgal68/"><i class="fab fa-3x fa-facebook-square"></i></a>
+  <a href="http://www.twitter.com"><i class="fab fa-3x fa-twitter-square"></i></a>
+
+</ul>
+</div>
+
+<div class="container" style="padding-top: 5%">
+  <div id="jumbtr1" class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="align-items-center" style="margin-top: 20px;">
+        <h1 class="typestyleall">
+          Welcome to Bochitto Travel, where you can
+          <span class="typewrite typestyle" data-period="1500" data-type='[ "create.", "adventure.", "plan.", "explore.", "travel." ]'></span>
+        </h1>
+      </div>
     </div>
-  </body>
+  </div>
+  	<!--<div style="position: sticky;"class="button_cont" align="center"><a class="example_c" href="add-website-here" target="_blank" rel="nofollow noopener">Request a trip</a></div> -->
+
+    <div style="position: sticky;"class="button_cont" align="center">
+      <%= link_to "Request a Trip", request_path, class: 'example_c' %>
+    </div>
+
+</div>
+
+<!--
+<nav>
+  <div class="container" style="padding-top: 5%">
+  <div style="position: relative;" class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Flights</a>
+    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Hotels</a>
+    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Cruises</a>
+    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Packages</a>
+  </div>
+
+
+  <div id="jumbtr1" class="jumbotron jumbotron-fluid">
+
+
+
+  <div class="tab-content" id="nav-tabContent">
+
+    <!-- FLIGHTS_TAB --> <!--
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <div class="container">
+      <form>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+          <label class="form-check-label" for="inlineRadio1">Round-Trip</label>
+        </div>
+
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+          <label class="form-check-label" for="inlineRadio2">One-Way</label>
+        </div>
+
+        <div class="form-row align-items-center" style="margin-top: 10px;">
+
+          <div id="guest" class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup"></label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fas fa-plane-departure"></i></div>
+              </div>
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="From: City or Airport">
+            </div>
+          </div>
+
+          <div id="guest" class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup"></label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fas fa-plane-arrival"></i></div>
+              </div>
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="To: City or Airport">
+            </div>
+          </div>
+
+          <div id="guest" class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup"></label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fas fa-calendar-alt"></i></div>
+              </div>
+              <input type="date" class="form-control" id="inlineFormInputGroup" >
+            </div>
+          </div>
+
+          <div id="guest" class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup"></label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fas fa-calendar-alt"></i></div>
+              </div>
+              <input type="date" class="form-control" id="inlineFormInputGroup">
+            </div>
+          </div>
+
+        </div>
+      </form>
+
+       <form>
+        <div  class="form-row align-items-center">
+
+          <div id="guest" class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup"></label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fas fa-users"></i></div>
+              </div>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <option selected>Adults</option>
+           <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="3">4</option>
+            <option value="3">5</option>
+          </select>
+            </div>
+          </div>
+
+          <div id="guest" class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup"></label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fas fa-baby"></i></div>
+              </div>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <option selected>Children</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="3">4</option>
+            <option value="3">5</option>
+          </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto">
+            <button id="submitButtonHome" type="submit" class="btn btn-primary mb-2">Submit</button>
+          </div>
+      </form>
+
+
+
+      </div>
+    </div>
+    <!-- HOTELS_TAB--> <!--
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+      <div class="container">
+
+      <form>
+
+        <div class="form-row align-items-center" style="margin-top: 10px;">
+
+          <div id="guest" class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup"></label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fas fa-city"></i></div>
+              </div>
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="City or Airport">
+            </div>
+          </div>
+
+          <div id="guest" class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup"></label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fas fa-concierge-bell"></i></div>
+              </div>
+              <input type="date" class="form-control" id="inlineFormInputGroup" placeholder="Check in">
+            </div>
+          </div>
+
+          <div id="guest" class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fas fa-concierge-bell"></i></div>
+              </div>
+              <input type="date" class="form-control" id="inlineFormInputGroup" placeholder="Check out">
+            </div>
+          </div>
+
+        </div>
+      </form>
+
+       <form>
+        <div  class="form-row align-items-center">
+
+          <div id="guest" class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fas fa-bed"></i></div>
+              </div>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <option selected>Rooms</option>
+           <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="3">4</option>
+            <option value="3">5</option>
+          </select>
+            </div>
+          </div>
+
+          <div id="guest" class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup"></label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fas fa-users"></i></div>
+              </div>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <option selected>Guests</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="3">4</option>
+            <option value="3">5</option>
+          </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto">
+            <button id="submitButtonHome" type="submit" class="btn btn-primary mb-2">Submit</button>
+          </div>
+      </form>
+
+
+
+      </div>
+    </div>
+
+
+    <!-- CRUISES_TAB --> <!--
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+
+      <div class="container">
+
+      <form>
+
+        <div class="form-row align-items-center" style="margin-top: 10px;">
+
+          <div id="guest" class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup"></label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fas fa-ship"></i></div>
+              </div>
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="From: Departure Port">
+            </div>
+          </div>
+
+            <div id="guest" class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup"></label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fas fa-ship"></i></div>
+              </div>
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="To: Destination Port">
+            </div>
+          </div>
+
+          <div id="guest" class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup"></label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fas fa-calendar-alt"></i></div>
+              </div>
+              <input type="date" class="form-control" id="inlineFormInputGroup">
+            </div>
+          </div>
+
+          <div id="guest" class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fas fa-calendar-alt"></i></div>
+              </div>
+              <input type="date" class="form-control" id="inlineFormInputGroup" >
+            </div>
+          </div>
+
+        </div>
+      </form>
+
+       <form>
+        <div  class="form-row align-items-center">
+
+          <div id="guest" class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fas fa-bed"></i></div>
+              </div>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <option selected>Stateroom Type</option>
+           <option value="1">Balcony</option>
+            <option value="2">Interior</option>
+            <option value="3">Oceanview</option>
+            <option value="3">Suite</option>
+          </select>
+            </div>
+          </div>
+
+          <div id="guest" class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup"></label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fas fa-anchor"></i></i></div>
+              </div>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <option selected>Cruise Line</option>
+            <option value="1">Carnival Cruise</option>
+            <option value="2">Royal Caribbean</option>
+            <option value="3">3</option>
+            <option value="3">4</option>
+            <option value="3">5</option>
+          </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto">
+            <button id="submitButtonHome" type="submit" class="btn btn-primary mb-2">Submit</button>
+          </div>
+      </form>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</nav> -->
+
+
+
+</div>
+
+<hr>
+
+
+<!-- DEALS SECTION  -->
+<!--
+<aside>
+  <div class="jumbotron2">
+    <h1 class="display-4">DEALS</h1>
+
+    <div id="post_deals" class="card" >
+        <img class="card-img-top" src="http://www.ricardobofill.es/wp-content/uploads//2016/03/W_Barcelona_Hotel_Ricardo_Bofill_Taller_Arquitectura_Barcelona_Spain_01.jpg" style="width:100%; height: 180px">
+        <div id="info_deals" class="card-body">
+          <h4 class="card-title">Barcelona</h4>
+          <p class="card-text"></p>
+          <h3 >30% OFF</h3>
+        </div>
+        <h5 style="text-align: center;">
+        <span style="float: left;margin-left: 30px;text-decoration: line-through;">$499</span>
+        <span style="margin-left: 15px;">$299</span></h5>
+        <h6 style="float: left;margin-left: 10px;">Only 1 left</h6>
+        <button type="button" class="btn btn-primary btn-sm">Book Now</button>
+    </div>
+
+<hr class="my-4">
+
+    <div id="post_deals" class="card" >
+        <img class="card-img-top" src="http://www.ricardobofill.es/wp-content/uploads//2016/03/W_Barcelona_Hotel_Ricardo_Bofill_Taller_Arquitectura_Barcelona_Spain_01.jpg" style="width:100%; height: 180px">
+        <div id="info_deals" class="card-body">
+          <h4 class="card-title">Barcelona</h4>
+          <p class="card-text"></p>
+          <h3 >30% OFF</h3>
+        </div>
+        <h5 style="text-align: center;">
+        <span style="float: left;margin-left: 30px;text-decoration: line-through;">$499</span>
+        <span style="margin-left: 15px;">$299</span></h5>
+        <h6 style="float: left;margin-left: 10px;">Only 1 left</h6>
+        <button type="button" class="btn btn-primary btn-sm">Book Now</button>
+    </div>
+
+<hr class="my-4">
+
+    <div id="post_deals" class="card" >
+        <img class="card-img-top" src="http://www.ricardobofill.es/wp-content/uploads//2016/03/W_Barcelona_Hotel_Ricardo_Bofill_Taller_Arquitectura_Barcelona_Spain_01.jpg" style="width:100%; height: 180px">
+        <div id="info_deals" class="card-body">
+          <h4 class="card-title">Barcelona</h4>
+          <p class="card-text"></p>
+          <h3 >30% OFF</h3>
+        </div>
+        <h5 style="text-align: center;">
+        <span style="float: left;margin-left: 30px;text-decoration: line-through;">$499</span>
+        <span style="margin-left: 15px;">$299</span></h5>
+        <h6 style="float: left;margin-left: 10px;">Only 1 left</h6>
+        <button type="button" class="btn btn-primary btn-sm">Book Now</button>
+    </div>
+
+  </div>
+</aside>
+-->
+<!-- POSTS MAIN TAB -->
+
+
+<div style="display: unset;">
+
+  <% @blogs.each do |blog| %>
+  <div id="post" class="card" >
+    <%= link_to post_path do %>
+    <img class="card-img-top" src="https://www.incimages.com/uploaded_files/image/work-vacation-policy-pop_3122.jpg" style="width:100%; height: 180px">
+      <div id="info" class="card-body">
+        <h4 class="card-title"><%= blog.destination %></h4>
+        <p class="card-text"></p>
+        <h3>From $<%= blog.overallPrice %></h3>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <% end %>
+
+<!--
+  <div id="post" class="card" >
+    <div alt="Card image">
+      < %= link_to post_path do %>
+        < %= image_tag 'https://www.incimages.com/uploaded_files/image/work-vacation-policy-pop_3122.jpg', :class => "style_image card-img-top" %>
+      <div id="info" class="card-body">
+        <h4 class="card-title">Varadero</h4>
+        <p class="card-text"></p>
+        <h3>From $299</h3>
+      </div>
+      < % end %>
+    </div>
+  </div>
+
+   <div id="post" class="card" >
+    <img class="card-img-top" src="https://cdn7.dissolve.com/p/D1028_94_065/D1028_94_065_1200.jpg" style="width:100%;height: 180px">
+    <div id="info" class="card-body">
+      <h4 class="card-title">New York</h4>
+      <p class="card-text"></p>
+      <h3 >From $99</h3>
+    </div>
+  </div>
+
+   <div id="post" class="card" >
+    <img class="card-img-top" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/02/22/09/paris.jpg?w968h681" style="width:100%; height: 180px">
+    <img class="card-img-top" src="https://www.trilussapalacehotel.it/wp-content/uploads/2018/01/roma-colosseo.jpg" style="width:100%; height: 180px">
+    <img class="card-img-top" src="http://www.ricardobofill.es/wp-content/uploads//2016/03/W_Barcelona_Hotel_Ricardo_Bofill_Taller_Arquitectura_Barcelona_Spain_01.jpg" style="width:100%; height: 180px">
+    <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Australia_Day.jpg" style="width:100%; height: 180px">
+    <img class="card-img-top" src="https://pix10.agoda.net/hotelImages/336/336870/336870_16042115000041680438.jpg?s=1024x768" alt="Card image" style="width:100%; height: 180px">
+    <img class="card-img-top" src="https://www.gannett-cdn.com/-mm-/1abbac059a7e6f21ff3aa7e38760a41a48819119/c=0-217-2118-1414/local/-/media/2018/04/14/USATODAY/USATODAY/636592630826477551-GettyImages-813272528.jpg?width=3200&height=1680&fit=crop" style="width:100%; height: 180px">
+    <img class="card-img-top" src="https://www.worldtravelguide.net/wp-content/uploads/2017/09/shu-Europe-Spain-Madrid-Financial-district-245037493-Sean-Pavone-1440x823.jpg" style="width:100%; height: 180px">
+    <img class="card-img-top" src="https://www.incimages.com/uploaded_files/image/work-vacation-policy-pop_3122.jpg" alt="Card image" style="width:100%;height: 180px">
+    <img class="card-img-top" src="https://cdn7.dissolve.com/p/D1028_94_065/D1028_94_065_1200.jpg" style="width:100%;height: 180px">
+    <img class="card-img-top" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/02/22/09/paris.jpg?w968h681" style="width:100%; height: 180px">
+    <img class="card-img-top" src="https://www.trilussapalacehotel.it/wp-content/uploads/2018/01/roma-colosseo.jpg" style="width:100%; height: 180px">
+    <img class="card-img-top" src="http://www.ricardobofill.es/wp-content/uploads//2016/03/W_Barcelona_Hotel_Ricardo_Bofill_Taller_Arquitectura_Barcelona_Spain_01.jpg" style="width:100%; height: 180px">
+    <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Australia_Day.jpg" style="width:100%; height: 180px">
+    <img class="card-img-top" src="https://pix10.agoda.net/hotelImages/336/336870/336870_16042115000041680438.jpg?s=1024x768" alt="Card image" style="width:100%; height: 180px">
+    <img class="card-img-top" src="https://www.gannett-cdn.com/-mm-/1abbac059a7e6f21ff3aa7e38760a41a48819119/c=0-217-2118-1414/local/-/media/2018/04/14/USATODAY/USATODAY/636592630826477551-GettyImages-813272528.jpg?width=3200&height=1680&fit=crop" style="width:100%; height: 180px">
+    <img class="card-img-top" src="https://www.worldtravelguide.net/wp-content/uploads/2017/09/shu-Europe-Spain-Madrid-Financial-district-245037493-Sean-Pavone-1440x823.jpg" style="width:100%; height: 180px">
+
+-->
+
+</div>
+
+<%= render 'layouts/footer' %>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript" src ="AP.js"></script>
+
+
+</body>
 </html>

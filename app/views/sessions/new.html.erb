@@ -1,0 +1,33 @@
+<% provide(:title, "Log In") %>
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src ="/assests/AP.js"></script>
+  <link rel="stylesheet" type="text/css" href="/assests/AP.css" />
+  <title><%= yield(:title) %> | Bochitto Travel</title>
+
+</head>
+
+<body>
+  <%= render 'layouts/header' %>
+  <%= form_for(:session, url: login_path) do |f| %>
+  <h2>Please Log In</h2>
+  <p>
+    <%= f.label :email, "Email", class: "sr-only" %><br>
+    <%= f.email_field :email, class: "form-control", placeholder: "Email" %>
+  </p>
+  <p>
+    <%= f.label :password, class: "sr-only" %><br>
+    <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+  </p>
+  <!--  <div class="checkbox">
+  <label>
+  <input type="checkbox" value="remember-me"> Remember me
+  </label>
+  </div> -->
+    <%= f.submit "Log In", class: "btn btn-primary btn-block" %>
+  <% end %>
+  <p>New User? <%= link_to "Sign up now!", signup_path %></p>
+  <%= render 'layouts/footer' %>
+</body>
+</html>

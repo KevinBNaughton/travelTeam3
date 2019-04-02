@@ -1,0 +1,44 @@
+<% provide(:title, "Request") %>
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src ="/assests/AP.js"></script>
+  <link rel="stylesheet" type="text/css" href="/assests/AP.css" />
+  <title><%= yield(:title) %> | Bochitto Travel</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+  <%= render 'layouts/header' %>
+  <%= form_for(:request,url: request_path) do |f| %>
+  <div class="container">
+
+    <%= f.label :userName %>
+    <%= f.text_field :userName, placeholder: "Your Name", class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
+    <%= f.label :origin %>
+    <%= f.text_field :origin, placeholder: "ex: New York", class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
+    <%= f.label :destination %>
+    <%= f.text_field :destination, placeholder: "ex: Miami", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+    <%= f.label :startDate %>
+    <%= f.date_field :startDate, placeholder: "Insert check in date", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+    <%= f.label :endDate %>
+    <%= f.date_field :endDate, placeholder: "Insert check out date", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+    <%= f.label :overallPrice %>
+    <%= f.text_field :overallPrice, placeholder: "Estimated number you're willing to spend", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+    <%= f.label :numberAdults %>
+    <%= f.select :numberAdults, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
+    <%= f.label :numberChildren %>
+    <%= f.select :numberChildren, [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
+    <%= f.label :overallDetails %>
+    <%= f.text_field :overallDetails, placeholder: "All details about your dream vacation", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+
+
+    <%= f.submit "Submit Request", class: "btn btn-primary" %>
+  </div>
+  <% end %>
+
+</div>
+<%= render 'layouts/footer' %>
+
+</body>
+</html>
