@@ -15,16 +15,17 @@
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" style="width: 370px;">
 
           <li class="nav-item">
-           <a style="height: 55px;font-size: smaller;" class="nav-link active" id="pills-hotel-tab" data-toggle="pill" href="#pills-hotel" role="tab" aria-controls="pills-contact" aria-selected="true">Hotel</a>
+           <a style="height: 55px;font-size: smaller;" class="nav-link active" id="pills-hotel-tab" data-toggle="pill" href="#pills-hotel" role="tab" aria-controls="pills-contact" aria-selected="true">New Post</a>
           </li>
 
           <li class="nav-item">
-            <a style="height: 55px;font-size: smaller;" class="nav-link " id="pills-cruise-tab" data-toggle="pill" href="#pills-cruise" role="tab" aria-controls="pills-contact" aria-selected="false">Cruises</a>
+            <a style="height: 55px;font-size: smaller;" class="nav-link " id="pills-cruise-tab" data-toggle="pill" href="#pills-cruise" role="tab" aria-controls="pills-contact" aria-selected="false">User Requests</a>
           </li>
-
+<!--
           <li class="nav-item">
             <a style="height: 55px;font-size: smaller;" class="nav-link " id="pills-packages-tab" data-toggle="pill" href="#pills-packages" role="tab" aria-controls="pills-contact" aria-selected="false">Packages</a>
           </li>
+          -->
         </ul>
       </div>
 
@@ -41,60 +42,25 @@
 <%= render :file => '/blogs/new' %>
   <div class="tab-pane fade" id="pills-cruise" role="tabpanel" aria-labelledby="pills-cruise-tab">
 
-<!-- CRUISES -->
-    <form>
-      <div class="container">
+<!-- CRUISES
 
-        <label>DESTINATION</label><input type="Price" class="form-control" placeholder="ex: Bahamas" style=" width: 70%;margin-top: 2%; display: table-row;"><br>
-        <label>PICTURE</label><input type="UL" class="form-control" placeholder="ex: https://www.image.png" style=" width: 70%; display: table-row;"><br>
-        <label>PRICE</label><input type="Price" class="form-control" placeholder="ex: $199" style=" width: 70%; display: table-row;"><br>
-        <label>DETAILS</label><input type="tex-box" class="form-control" placeholder="Insert specific details about this POST" style=" width: 70%; display: table-row;"><br>
+<div style="width: 75%">
 
-     	<div class="jumbotron_fluid">
-          <div style="padding-left: 60px;" >
-              <div class="form_check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">All meals included</label>
-                  </div>
-                <div class="form_check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Swimming pool</label>
-                </div>
-                <div class="form_check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Free WiFi</label>
-                </div>
-                <div class="form_check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Fitness center</label>
-                </div>
-                <div class="form_check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Drink packages</label>
-                </div>
-                <div class="form_check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Bar & Club</label>
-                </div>
-                <div class="form_check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Non-smoking rooms</label>
-                </div>
-                <div class="form_check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Game room</label>
-                </div>
-          </div>
-        </div>
-        <label>DEPARTURE</label><input type="date" class="form-control" placeholder="Insert check in date" style=" width: 70%; display: table-row;"><br>
-        <label>ARRIVAL</label><input type="date" class="form-control" placeholder="Insert check out date" style=" width: 70%; display: table-row;"><br>
-        <label>ROOMS</label><input type="number" class="form-control" placeholder="Insert how many Rooms" style=" width: 70%; display: table-row;"><br>
-
+  < % @blogs.each do |blog| %>
+  <div id="post" class="card" >
+    <img class="card-img-top" src="https://www.incimages.com/uploaded_files/image/work-vacation-policy-pop_3122.jpg" style="width:100%; height: 180px">
+      <div id="info" class="card-body">
+        <h4 class="card-title">< %= blog.destination %></h4>
+        <p class="card-text"></p>
+        <h3>From $< %= blog.overallPrice %></h3>
       </div>
-    </form>
+    </div>
+  </div>
+   < % end %>
+
   </div>
   <div class="tab-pane fade" id="pills-packages" role="tabpanel" aria-labelledby="pills-packages-tab">
-
+-->
 <!-- PACKAGES -->
 
     <form>

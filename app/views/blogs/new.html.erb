@@ -17,40 +17,35 @@
   <%= f.label :overallDetails %>
   <%= f.text_field :overallDetails, placeholder: "Extra details", class: "form-control", style:" width: 70%; display: table-row;" %><br>
 
-    <label>PICTURE</label><input type="UL" class="form-control" placeholder="ex: https://www.image.png" style=" width: 70%; display: table-row;"><br>
    <div class="jumbotron_fluid">
       <div style="padding-left: 60px;" >
           <div class="form_check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Breakfast included</label>
+            <%= f.label :breakfast %>
+            <%= f.check_box :breakfast, class:"form-check-input", id: "exampleCheck1" %>
               </div>
             <div class="form_check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Swimming pool</label>
+              <%= f.label :swimming %>
+              <%= f.check_box :swimming, class:"form-check-input", id: "exampleCheck1" %>
             </div>
             <div class="form_check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Free WiFi</label>
+              <%= f.label :wifi %>
+              <%= f.check_box :wifi, class:"form-check-input", id: "exampleCheck1" %>
             </div>
             <div class="form_check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Fitness center</label>
+              <%= f.label :fitness %>
+              <%= f.check_box :fitness, class:"form-check-input", id: "exampleCheck1" %>
             </div>
             <div class="form_check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Free parking</label>
+              <%= f.label :parking %>
+              <%= f.check_box :parking, class:"form-check-input", id: "exampleCheck1" %>
             </div>
             <div class="form_check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Bar</label>
+              <%= f.label :bar %>
+              <%= f.check_box :bar, class:"form-check-input", id: "exampleCheck1" %>
             </div>
             <div class="form_check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Non-smoking rooms</label>
-            </div>
-            <div class="form_check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Restaurant</label>
+              <%= f.label :smoking %>
+              <%= f.check_box :smoking, class:"form-check-input", id: "exampleCheck1" %>
             </div>
       </div>
     </div>
