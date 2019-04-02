@@ -482,4 +482,11 @@ label {
     transition: all 0.4s ease 0s;
 }
 
+.sign_up{
+
+ margin-left:20px;
+ color: #163f5e;
+ font-size: 16.5px;
+}
+
 /****************************Sign UP Form Style**********************************************************/

@@ -7,7 +7,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a><%= link_to image_tag("final.png", alt: "Company logo"), root_path %></a>
+      <a><%= link_to image_tag("m.png",width: 140, alt: "Company logo"), root_path %></a>
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="box-wrap">
         <li class="nav-item" id="box">
           <%= link_to "Home", root_path, id: "logo" %>
@@ -25,12 +25,17 @@
           <%= link_to "Log out", logout_path, method: :delete %>
         </a>
       <% else %>
-        <a class="form-inline my-2 my-lg-0" style="width: auto">
-          <%= link_to "Sign up", signup_path %>
+        
+        <a  class="form-inline my-2 my-lg-0" style="width: auto">
+          <%= link_to "Sign up", signup_path, class: "sign_up" %>
+          <i style="margin-left: 5.5px;" class="fas fa-user-plus"></i>
         </a>
-        <a class="form-inline my-2 my-lg-0" style="width: auto">
-          <%= link_to "Log in", login_path %>
+        
+        <a class="form-inline my-2 my-lg-0 " style="width: auto">
+          <%= link_to "Log in", login_path, class: "sign_up" %>
+          <i style="margin-left: 5.5px;margin-right: 40px;"class="fas fa-user"></i>
         </a>
+        
       <% end %>
 
 
