@@ -3,6 +3,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def index
+    current_user=User.find_by_email(session[:email])
+  end
+
   def new
     @user = User.new
   end
