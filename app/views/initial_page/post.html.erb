@@ -108,7 +108,7 @@
 </style>
 
 <body class="container body_shadow">
-  <div  >
+  <div>
 
   <div class=" post_pictures shadow" >
   <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel" >
@@ -126,45 +126,44 @@
 </div>
 </div>
 
+<% f = @blog %>
+<div class=" container post_details">
 
-    <div class=" container post_details">
+	<h1 style="text-align: center;font-size: -webkit-xxx-large;"><%= f.destination %></h1>
+	<h3 class="star">  &#x2605;&#x2605;&#x2605;&#x2605;</h3>
+	<h2 style="text-align: center; font-size: small; font-style: italic;"> from <span style="font-size: xx-large; font-style: normal;"><%= f.overallPrice %></span> </h2>
+	<h5 style="text-align: center;font-style: italic;">  availiable from <span> <%= f.startDate %> </span> to <span> <%= f.endDate %> </span></h5>
+	<hr>
+	<!--<div style=" text-align: -webkit-center;">
 
-        <h1 style="text-align: center;font-size: -webkit-xxx-large;">  Raddisson</h1>
-        <h3 class="star">  &#x2605;&#x2605;&#x2605;&#x2605;</h3>
-        <h2 style="text-align: center;"> <span style="font-size: xx-large;"> New York </span></h2>
-        <h2 style="text-align: center; font-size: small; font-style: italic;"> from <span style="font-size: xx-large; font-style: normal;">$299</span> </h2>
-        <h5 style="text-align: center;font-style: italic;">  aviliable from <span> March 1 </span> to <span> June 30 </span></h5>
-<hr>
-<div style=" text-align: -webkit-center;">
+		<div style="text-align: center; width: 450px;">
+			<div class="date_post_input">
+				<label>Check in </label><br>
+				<input  class="form-control" type="date" name="">
+			</div>
+			<div class="date_post_input">
+				<label>Check in </label><br>
+				<input style=" text-align: center;" class="form-control" type="date" name="">
+			</div>
 
-<div style="text-align: center; width: 450px;">
-        <div class="date_post_input">
-            <label>Check in </label><br>
-            <input  class="form-control" type="date" name="">
-        </div>
-        <div class="date_post_input">
-            <label>Check in </label><br>
-            <input style=" text-align: center;" class="form-control" type="date" name="">
-        </div>
-
-        <div class="date_post_input">
-            <label>Guests  </label><br>
-            <input  class="form-control" type="number" name="">
-        </div>
-        <div class="date_post_input">
-            <label>Rooms </label><br>
-            <input  class="form-control" type="number" name="">
-        </div>
-
+			<div class="date_post_input">
+				<label>Guests  </label><br>
+				<input  class="form-control" type="number" name="">
+			</div>
+			<div class="date_post_input">
+				<label>Rooms </label><br>
+				<input  class="form-control" type="number" name="">
+			</div>
 
 
-</div>
-</div>
+
+		</div>
+</div> -->
     </div>
 
     	 	<div style="display: inline-block;width: 50%; min-width: 400px; text-align: center;margin-top: 8px;">
-				<label >Additional requests</label>
-				<textarea rows="8" cols="60"></textarea>
+				<label >Details</label>
+				<textarea rows="8" cols="60" placeholder=<%= f.specialDetails %>></textarea>
 
 			</div>
 
