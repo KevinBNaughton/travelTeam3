@@ -11,7 +11,7 @@ class InitialPageController < ApplicationController
   end
 
   def post
-    @blog = Blog.find(params[:id])
+    @blog = Blog.find(1)
   end
 
 
