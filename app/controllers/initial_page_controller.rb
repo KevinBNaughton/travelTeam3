@@ -7,6 +7,7 @@ class InitialPageController < ApplicationController
   end
 
   def admin
+    @requests = Request.all
   end
 
   def post

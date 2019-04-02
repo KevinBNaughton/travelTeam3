@@ -7,8 +7,6 @@
   <body>
     <%= render 'layouts/header' %>
 
-
-
     <div class="container" >
 
       <div style=" font-size: xx-large; margin-top: 3%;text-align: -webkit-center; " >
@@ -21,11 +19,6 @@
           <li class="nav-item">
             <a style="height: 55px;font-size: smaller;" class="nav-link " id="pills-cruise-tab" data-toggle="pill" href="#pills-cruise" role="tab" aria-controls="pills-contact" aria-selected="false">User Requests</a>
           </li>
-<!--
-          <li class="nav-item">
-            <a style="height: 55px;font-size: smaller;" class="nav-link " id="pills-packages-tab" data-toggle="pill" href="#pills-packages" role="tab" aria-controls="pills-contact" aria-selected="false">Edit Posts</a>
-          </li>
-          -->
         </ul>
       </div>
 
@@ -40,28 +33,43 @@
 
 <!-- NEW POSTS -->
 <%= render :file => '/blogs/new' %>
-  <div class="tab-pane fade" id="pills-cruise" role="tabpanel" aria-labelledby="pills-cruise-tab">
 
-<!-- USER REQUEST
 
-<div style="width: 75%">
+<!-- USER REQUEST -->
+<div class="tab-pane fade" id="pills-cruise" role="tabpanel" aria-labelledby="pills-cruise-tab">
 
-  < % @request.each do |request| %>
-  <div id="post" class="card" >
-    <img class="card-img-top" src="https://www.incimages.com/uploaded_files/image/work-vacation-policy-pop_3122.jpg" style="width:100%; height: 180px">
-      <div id="info" class="card-body">
-        <h4 class="card-title">< %= request.userName %></h4>
-        <p class="card-text"></p>
-      </div>
-    </div>
-  </div>
-  < % end %>
- -->
-  </div>
-  <div class="tab-pane fade" id="pills-packages" role="tabpanel" aria-labelledby="pills-packages-tab">
+  <table class="table">
+   <thead>
+     <tr>
+       <th scope="col">Origin</th>
+       <th scope="col">Destination</th>
+       <th scope="col">Start Date</th>
+       <th scope="col">End Date</th>
+       <th scope="col">overallPrice</th>
+       <th scope="col">Number of Adults</th>
+       <th scope="col">Number of Children</th>
+       <th scope="col">Overall Details</th>
+     </tr>
+   </thead>
+   <tbody>
+     <% @requests.each do |request| %>
+     <tr>
+       <td><%= request.origin %></td>
+       <td><%= request.destination %></td>
+       <td><%= request.startDate %></td>
+       <td><%= request.endDate %></td>
+       <td><%= request.overallPrice %></td>
+       <td><%= request.numberAdults %></td>
+       <td><%= request.numberChildren %></td>
+       <td><%= request.overallDetails %></td>
+     </tr>
+     <% end %>
+   </tbody>
+  </table>
 
+</div>
 <!-- PACKAGES -->
-
+  <div class="tab-pane fade" id="pills-packages" role="tabpanel" aria-labelledby="pills-packages-tab">
     <form>
       <div class="container">
 

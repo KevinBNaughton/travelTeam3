@@ -18,4 +18,4 @@
 //= require_tree.
 //= require jquery3
 //= require bootstrap-sprockets
-//= require AP
+//= require AP.js
