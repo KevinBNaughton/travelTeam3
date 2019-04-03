@@ -11,6 +11,7 @@ class InitialPageController < ApplicationController
   end
 
   def post
+    @blog = Blog.find(1)
   end
 
 
