@@ -19,10 +19,10 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   get    '/admin', to: 'blogs#new'
+  get   '/admin',   to: 'blogs#index'
   post    '/admin', to: 'blogs#create'
   get   '/request',  to: 'requests#new'
   post  '/request',  to: 'requests#create'
-  #get   '/blogs', to: 'blogs#index'
 
   resources :blogs
 
