@@ -489,10 +489,11 @@ label {
  font-size: 16.5px;
 }
 
-/*li:last-child {
+/*#box_wrap > li:last-child {
      float:right
 }
-li:nth-last-child(2) {
+
+#box_wrap > li:nth-last-child(2) {
     float:right
 }
 */

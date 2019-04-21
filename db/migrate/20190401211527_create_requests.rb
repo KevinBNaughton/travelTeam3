@@ -4,6 +4,7 @@ class CreateRequests < ActiveRecord::Migration[5.1]
 
 #basic info. Every post needs these
     t.string :userName
+    t.string :email
     t.date :startDate
     t.date :endDate
     t.integer :overallPrice
@@ -13,7 +14,7 @@ class CreateRequests < ActiveRecord::Migration[5.1]
     t.string :origin
     t.string :destination
 
-      t.timestamps
+    t.timestamps
     end
   end
 end
