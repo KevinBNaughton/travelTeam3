@@ -21,7 +21,7 @@
     <div class="container" >
 
       <div style=" font-size: xx-large; margin-top: 3%;text-align: -webkit-center; " >
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" style="width: 370px;">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" style="width: 600px;">
 
           <li class="nav-item">
            <a style="height: 55px;font-size: smaller;" class="nav-link active" id="pills-hotel-tab" data-toggle="pill" href="#pills-hotel" role="tab" aria-controls="pills-contact" aria-selected="true">New Post</a>
@@ -30,8 +30,9 @@
           <li class="nav-item">
             <a style="height: 55px;font-size: smaller;" class="nav-link " id="pills-cruise-tab" data-toggle="pill" href="#pills-cruise" role="tab" aria-controls="pills-contact" aria-selected="false">User Requests</a>
           </li>
+
           <li class="nav-item">
-            <a style="height: 55px;font-size: smaller;" class="nav-link " id="pills-cruise-tab" data-toggle="pill" href="#pills-cruise" role="tab" aria-controls="pills-contact" aria-selected="false">Blogs Posted</a>
+            <a style="height: 55px;font-size: smaller;" class="nav-link " id="pills-cruise-tab" data-toggle="pill" href="#pills-packages" role="tab" aria-controls="pills-contact" aria-selected="false">Blogs Posted</a>
           </li>
         </ul>
       </div>
@@ -84,30 +85,28 @@
   </table>
 
 </div>
-<!-- Blogs -->
+<!-- Blogs-->
   <div class="tab-pane fade" id="pills-packages" role="tabpanel" aria-labelledby="pills-packages-tab">
     <table class="table">
      <thead>
        <tr>
-         <th scope="col">Name</th>
+         <th scope="col">Email</th>
          <th scope="col">Origin</th>
          <th scope="col">Destination</th>
          <th scope="col">Start Date</th>
          <th scope="col">End Date</th>
          <th scope="col">overallPrice</th>
-         <th scope="col">Overall Details</th>
        </tr>
      </thead>
      <tbody>
-       <% @blogs.each do |blog| %>
+       <% @requests.each do |request| %>
        <tr>
-         <td><%= blog.name %></td>
+         <td><%= blog.userName %></td>
          <td><%= blog.origin %></td>
          <td><%= blog.destination %></td>
          <td><%= blog.startDate %></td>
          <td><%= blog.endDate %></td>
          <td><%= blog.overallPrice %></td>
-         <td><%= blog.overallDetails %></td>
        </tr>
        <% end %>
      </tbody>
