@@ -414,7 +414,7 @@
 
 
 <!-- DEALS SECTION  -->
-<!--
+
 <aside>
   <div class="jumbotron2">
     <h1 class="display-4">DEALS</h1>
@@ -433,54 +433,68 @@
         <button type="button" class="btn btn-primary btn-sm">Book Now</button>
     </div>
 
-<hr class="my-4">
 
-    <div id="post_deals" class="card" >
-        <img class="card-img-top" src="http://www.ricardobofill.es/wp-content/uploads//2016/03/W_Barcelona_Hotel_Ricardo_Bofill_Taller_Arquitectura_Barcelona_Spain_01.jpg" style="width:100%; height: 180px">
-        <div id="info_deals" class="card-body">
-          <h4 class="card-title">Barcelona</h4>
-          <p class="card-text"></p>
-          <h3 >30% OFF</h3>
-        </div>
-        <h5 style="text-align: center;">
-        <span style="float: left;margin-left: 30px;text-decoration: line-through;">$499</span>
-        <span style="margin-left: 15px;">$299</span></h5>
-        <h6 style="float: left;margin-left: 10px;">Only 1 left</h6>
-        <button type="button" class="btn btn-primary btn-sm">Book Now</button>
-    </div>
 
-<hr class="my-4">
 
-    <div id="post_deals" class="card" >
-        <img class="card-img-top" src="http://www.ricardobofill.es/wp-content/uploads//2016/03/W_Barcelona_Hotel_Ricardo_Bofill_Taller_Arquitectura_Barcelona_Spain_01.jpg" style="width:100%; height: 180px">
-        <div id="info_deals" class="card-body">
-          <h4 class="card-title">Barcelona</h4>
-          <p class="card-text"></p>
-          <h3 >30% OFF</h3>
-        </div>
-        <h5 style="text-align: center;">
-        <span style="float: left;margin-left: 30px;text-decoration: line-through;">$499</span>
-        <span style="margin-left: 15px;">$299</span></h5>
-        <h6 style="float: left;margin-left: 10px;">Only 1 left</h6>
-        <button type="button" class="btn btn-primary btn-sm">Book Now</button>
-    </div>
 
   </div>
 </aside>
--->
+
+<!-- NAV WITH PACKAGES , HOTELS , CRUISES -->
+
+<ul class="nav nav-tabs1" id="myTab" role="tablist" style="font-size: xx-large; margin-left: 10%;">
+  <li class="nav-item1">
+    <a class="nav-link active1" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" style="
+    /* margin-left: 330px; */
+"><i class="fas fa-suitcase" style="margin-right: 10px;"></i>Packages</a>
+  </li>
+  <li class="nav-item1">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" style="
+    margin-left: 80px;
+"><i class="fas fa-concierge-bell" style="margin-right: 10px;"></i>Hotels</a>
+  </li>
+  <li class="nav-item1">
+    <a class="nav-link " id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false" style="
+    margin-left: 80px;
+"><i class="fas fa-ship" style="margin-right: 10px"></i>Cruises</a>
+  </li>
+</ul>
+
 <!-- POSTS MAIN TAB -->
 
 
-<div style="display: unset;">
+<div class="tab-content" id="myTabContent">
+
+<!-- PACKAGES -->
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+    <div style="display: unset;width: 75%">
+
+		  <% @blogs.each do |blog| %>
+			  <div id="post" class="card" >
+			    <%= link_to post_path do %>
+			    <img class="card-img-top" src="https://www.incimages.com/uploaded_files/image/work-vacation-policy-pop_3122.jpg" style="width:100%; height: 220px">
+			      <div id="info" class="card-body">
+			        <h4 class="card-title"><%= blog.destination %></h4>
+			        <p class="card-text"></p>
+			        <h3>From $<%= blog.overallPrice %></h3>
+			      </div>
+			      <% end %>
+			    </div>
+		    <% end %>
+    </div>
+    <p>packages</p>
+  </div>
+<!-- HOTEL -->
+
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+   <div style="display: unset;width: 75%">
 
   <% @blogs.each do |blog| %>
   <div id="post" class="card" >
     <%= link_to post_path do %>
-    <% if blog.image_url == nil %>
-         <img class="card-img-top" src="https://www.incimages.com/uploaded_files/image/work-vacation-policy-pop_3122.jpg" style="width:100%; height: 180px">
-       <% else %>
-         <img class="card-img-top" src= "<% blog.image_url %>" style="width:100%; height: 180px">
-       <% end %>
+    <img class="card-img-top" src="https://www.incimages.com/uploaded_files/image/work-vacation-policy-pop_3122.jpg" style="width:100%; height: 220px">
       <div id="info" class="card-body">
         <h4 class="card-title"><%= blog.destination %></h4>
         <p class="card-text"></p>
@@ -488,8 +502,41 @@
       </div>
       <% end %>
     </div>
+    <% end %>
   </div>
-  <% end %>
+  <p>hotel</p>
+  </div>
+
+
+  <!-- CRUISES -->
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+
+  		   <div style="display: unset;width: 75%">
+
+  <% @blogs.each do |blog| %>
+  <div id="post" class="card" >
+    <%= link_to post_path do %>
+    <img class="card-img-top" src="https://www.incimages.com/uploaded_files/image/work-vacation-policy-pop_3122.jpg" style="width:100%; height: 220px">
+      <div id="info" class="card-body">
+        <h4 class="card-title"><%= blog.destination %></h4>
+        <p class="card-text"></p>
+        <h3>From $<%= blog.overallPrice %></h3>
+      </div>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+  <p>cruises</p>
+  </div>
+  
+</div>
+
+
+
+  
+
+
 
 <!--
   <div id="post" class="card" >
