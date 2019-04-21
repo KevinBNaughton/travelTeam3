@@ -21,4 +21,11 @@ module SessionsHelper
     @current_user = nil
   end
 
+  def admin?
+    if session[:user_id]
+      return true if current_user.name == "admin"
+    end
+    false
+  end
+
 end

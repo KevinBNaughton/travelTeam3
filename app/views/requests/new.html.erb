@@ -13,8 +13,13 @@
   <%= form_for(:request,url: request_path) do |f| %>
   <div class="container">
 
-    <%= f.label :Email %>
-    <%= f.text_field :userName, placeholder: "Your Email", class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
+    <!-- < %= f.label :Email %>
+    < %= f.text_field :userName, placeholder: "Your Email", class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
+    -->
+    <% if current_user %>
+      <%= f.hidden_field :userName, value: current_user.email, class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
+    <% end %>
+
     <%= f.label :origin %>
     <%= f.text_field :origin, placeholder: "ex: New York", class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
     <%= f.label :destination %>
