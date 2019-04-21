@@ -27,7 +27,11 @@ module SessionsHelper
 
   def admin?
     if session[:user_id]
-      return true if current_user.email == "admin@gmail.com"
+      if !(current_user == nil)
+        return true if current_user.email == "admin@gmail.com"
+      end
+    else
+      false
     end
     false
   end
