@@ -5,7 +5,7 @@ class User < ApplicationRecord
   validates :name,
             presence: true
 
-  validate  :check_admin?
+  # validate  :check_admin?
 
   #VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: { maximum: 255 },
@@ -15,13 +15,14 @@ class User < ApplicationRecord
   validates :password,
             presence:true
 
-  private
-  def check_admin?
-    if User.where(name: 'admin').all
-      if :name == "admin"
-        errors.add(:name, "Cannot have \"admin\" as your name.")
-      end
-    end
-  end
+  # private
+  # def check_admin?
+  #   if User.where(name: "admin").all
+  #     if :name == "admin"
+  #       errors.add(:name, "Cannot have \"admin\" as your name.")
+  #       false
+  #     end
+  #   end
+  # end
 
 end
