@@ -16,7 +16,6 @@ User.all
 exit
 
 
-
 In view users has new that is sign up page
 in views sessions new is login page
 in controllers users controller has new for the page

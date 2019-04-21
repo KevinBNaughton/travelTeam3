@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   post    '/admin', to: 'blogs#create'
   get   '/request',  to: 'requests#new'
   post  '/request',  to: 'requests#create'
+  get   '/profile',  to: 'users#edit'
+  patch   '/profile', to: 'users#update'
   #get   '/blogs', to: 'blogs#index'
 
   resources :blogs
