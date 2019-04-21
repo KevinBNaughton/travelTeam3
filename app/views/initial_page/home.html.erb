@@ -472,7 +472,7 @@
 
 		  <% @blogs.each do |blog| %>
 			  <div id="post" class="card" >
-			    <%= link_to post_path d  o %>
+			    <%= link_to post_path do %>
     <% if blog.image_url == nil %>
          <img class="card-img-top" src="https://www.incimages.com/uploaded_files/image/work-vacation-policy-pop_3122.jpg" style="width:100%; height: 180px">
        <% else %>
