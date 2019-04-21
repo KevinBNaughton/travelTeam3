@@ -21,4 +21,10 @@ class RequestsController < ApplicationController
     params.require(:request).permit(:userName,:startDate, :endDate, :overallPrice, :numberAdults, :numberChildren, :overallDetails, :origin, :destination)
   end
 
+  def goHome
+    redirect_to root_path
+  end
+
+  helper_method :goHome
+
 end

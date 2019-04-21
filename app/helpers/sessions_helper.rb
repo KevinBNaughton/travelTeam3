@@ -5,6 +5,10 @@ module SessionsHelper
     session[:user_id] = user.id
   end
 
+  def current_user?(user)
+    user == current_user
+  end
+
   # Returns the current logged-in user (if any).
   def current_user
     if session[:user_id]
@@ -19,6 +23,13 @@ module SessionsHelper
   def log_out
     session.delete(:user_id)
     @current_user = nil
+  end
+
+  def admin?
+    if session[:user_id]
+      return true if current_user.email == "admin@gmail.com"
+    end
+    false
   end
 
 end

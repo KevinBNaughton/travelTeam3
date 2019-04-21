@@ -9,36 +9,44 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
+  <% if logged_in? %>
   <%= render 'layouts/header' %>
   <%= form_for(:request,url: request_path) do |f| %>
   <div class="container">
 
-    <%= f.label :Email %>
-    <%= f.text_field :userName, placeholder: "Your Email", class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
-    <%= f.label :origin %>
-    <%= f.text_field :origin, placeholder: "ex: New York", class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
-    <%= f.label :destination %>
-    <%= f.text_field :destination, placeholder: "ex: Miami", class: "form-control", style:" width: 70%; display: table-row;" %><br>
-    <%= f.label :startDate %>
-    <%= f.date_field :startDate, placeholder: "Insert check in date", class: "form-control", style:" width: 70%; display: table-row;" %><br>
-    <%= f.label :endDate %>
-    <%= f.date_field :endDate, placeholder: "Insert check out date", class: "form-control", style:" width: 70%; display: table-row;" %><br>
-    <%= f.label :overallPrice %>
-    <%= f.text_field :overallPrice, placeholder: "Estimated number you're willing to spend", class: "form-control", style:" width: 70%; display: table-row;" %><br>
-    <%= f.label :numberAdults %>
-    <%= f.select :numberAdults, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
-    <%= f.label :numberChildren %>
-    <%= f.select :numberChildren, [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
-    <%= f.label :overallDetails %>
-    <%= f.text_field :overallDetails, placeholder: "All details about your dream vacation", class: "form-control", style:" width: 70%; display: table-row;" %><br>
-
-
-    <%= f.submit "Submit Request", class: "btn btn-primary" %>
-  </div>
+  <!--
+  < %= f.label :Email %>
+  < %= f.text_field :userName, placeholder: "Your Email", class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
+  -->
+  <% if current_user %>
+    <%= f.hidden_field :userName, value: current_user.email, class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
   <% end %>
 
-</div>
-<%= render 'layouts/footer' %>
+  <%= f.label :origin %>
+  <%= f.text_field :origin, placeholder: "ex: New York", class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
+  <%= f.label :destination %>
+  <%= f.text_field :destination, placeholder: "ex: Miami", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+  <%= f.label :startDate %>
+  <%= f.date_field :startDate, placeholder: "Insert check in date", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+  <%= f.label :endDate %>
+  <%= f.date_field :endDate, placeholder: "Insert check out date", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+  <%= f.label :overallPrice %>
+  <%= f.text_field :overallPrice, placeholder: "Estimated number you're willing to spend", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+  <%= f.label :numberAdults %>
+  <%= f.select :numberAdults, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
+  <%= f.label :numberChildren %>
+  <%= f.select :numberChildren, [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
+  <%= f.label :overallDetails %>
+  <%= f.text_field :overallDetails, placeholder: "All details about your dream vacation", class: "form-control", style:" width: 70%; display: table-row;" %><br>
 
+
+  <%= f.submit "Submit Request", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<%= render 'layouts/footer' %>
+<% else %>
+<% goHome %>
+<% end %>
 </body>
 </html>

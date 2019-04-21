@@ -9,7 +9,7 @@ class BlogsController < ApplicationController
   end
 
   def index
-    @blogs = Blog.all
+    @blog = Blog.all
   end
 
   def create
@@ -24,7 +24,7 @@ class BlogsController < ApplicationController
 
   private
     def blog_params
-      params.require(:blog).permit(:name, :overallPrice,:origin,:destination,:startDate,:endDate,:overallDetails)
+      params.require(:blog).permit(:name,:image_url,:overallPrice,:origin,:destination,:startDate,:endDate,:overallDetails)
 
     end
 

@@ -3,26 +3,17 @@ rails test
 
 
 
-
-
 git add .
 git commit -m "Say something here"
 git pull origin master
 git status
 
+git push origin master
 
-
-
+//to look at what is in the database
 rails console
-Users.all
+User.all
 exit
-
-
-
-
-
-
-
 
 
 In view users has new that is sign up page
@@ -31,3 +22,10 @@ in controllers users controller has new for the page
 create is creating new user
 controller sessions this is the log in functions
 everything back to routes
+
+
+reset database: rake db:drop:_unsafe db:create db:migrate db:seed
+
+
+Things for sprint 3:
+add error message for entering wrong email/password

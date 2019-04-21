@@ -1,4 +1,4 @@
-<!-- 
+<!--
 #
 # This is the HTML file for the header, which is rendered in each other file
 #
@@ -23,7 +23,7 @@
   }
 
   .accountButton:hover {
-    background-color: #FFE74C;
+    background-color: blue;
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
 </style>
@@ -41,11 +41,30 @@
         <li class="nav-item" id="box">
           <%= link_to "About Us", contact_path %>
         </li>
+        <% if admin? %>
+          <li class="nav-item" id="box">
+            <%= link_to "Admin", admin_path %>
+          </li>
+        <% end %>
+
+        <% if logged_in? %>
         <li class="nav-item" id="box">
-          <%= link_to "Admin", admin_path %>
+          <%= link_to "Log out", logout_path, method: :delete %>
         </li>
+        <li class="nav-item" id="box">
+          <%= link_to "Profile", profile_path(current_user) %>
+        </li>
+        <% else %>
+        <li class="nav-item" id="box">
+            <%= link_to "Sign up", signup_path %>
+        </li>
+        <li class="nav-item" id="box">
+            <%= link_to "Log in", login_path %>
+        </li>
+        <% end %>
       </ul>
 
+<!--
       <% if logged_in? %>
       <button class="accountButton">
         <a class="form-inline my-2 my-lg-0" style="width: auto">
@@ -62,13 +81,13 @@
       </button>
 
         <button class="accountButton">
-        <a class="form-inline my-2 my-lg-0 " style="width: auto">
+        <a class="form-inline my-2 my-lg-0 button_cont" style="width: auto">
           <%= link_to "Log in", login_path, class: "sign_up" %>
           <i style="margin-left: 5.5px;margin-right: 40px;"class="fas fa-user"></i>
         </a>
       </button>
       <% end %>
-
+-->
 
     </div>
   </nav>
