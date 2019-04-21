@@ -479,7 +479,7 @@
     <% if blog.image_url == nil %>
          <img class="card-img-top" src="https://www.incimages.com/uploaded_files/image/work-vacation-policy-pop_3122.jpg" style="width:100%; height: 180px">
        <% else %>
-         <img class="card-img-top" src= "<% blog.image_url %>" style="width:100%; height: 180px">
+         <%= image_tag blog.image_url, style: "width:100%; height: 180px" %>
        <% end %>
       <div id="info" class="card-body">
         <h4 class="card-title"><%= blog.destination %></h4>
