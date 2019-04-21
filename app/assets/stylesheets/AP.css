@@ -484,9 +484,18 @@ label {
 
 .sign_up{
 
- margin-left:20px;
+ margin-right:20px;
  color: #163f5e;
  font-size: 16.5px;
 }
+
+/*#box_wrap > li:last-child {
+     float:right
+}
+
+#box_wrap > li:nth-last-child(2) {
+    float:right
+}
+*/
 
 /****************************Sign UP Form Style**********************************************************/
