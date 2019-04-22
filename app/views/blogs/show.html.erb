@@ -112,7 +112,7 @@
 <body class="container body_shadow">
 
 	<%= render 'layouts/header' %>
-	<div  >
+	<div>
 
 		<div class=" post_pictures shadow" >
 			<div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel" >
@@ -130,14 +130,13 @@
 			</div>
 		</div>
 
-		<% f = @blog %>
 		<div style="display: unset;">
 			<div class="post_details">
 
-				<h1 style="text-align: center;font-size: -webkit-xxx-large;"><%= f.destination %></h1>
+				<h1 style="text-align: center;font-size: -webkit-xxx-large;"><%= @blog.destination %></h1>
 				<h3 class="star">  &#x2605;&#x2605;&#x2605;&#x2605;</h3>
-				<h2 style="text-align: center; font-size: small; font-style: italic;"> from <span style="font-size: xx-large; font-style: normal;"><%= f.overallPrice %></span> </h2>
-				<h5 style="text-align: center;font-style: italic;">  availiable from <span> <%= f.startDate %> </span> to <span> <%= f.endDate %> </span></h5>
+				<h2 style="text-align: center; font-size: small; font-style: italic;"> from <span style="font-size: xx-large; font-style: normal;"><%= @blog.overallPrice %></span> </h2>
+				<h5 style="text-align: center;font-style: italic;">  availiable from <span> <%= @blog.startDate %> </span> to <span> <%= @blog.endDate %> </span></h5>
 				<hr>
 				<div style=" text-align: -webkit-center;">
 
@@ -162,8 +161,8 @@
 
 						<div style="display: inline-block;width: 50%; min-width: 400px;height:380px; text-align: center;margin-top: 8px;">
 				<label >Details</label>
-				<a><%= f.specialDetails %></a>
-				<textarea rows="8" cols="60" placeholder= %= f.specialDetails %></textarea> 
+				<a><%= @blog.specialDetails %></a>
+				<textarea rows="8" cols="60" placeholder= %= f.specialDetails %></textarea>
 
 			</div>
 
@@ -173,7 +172,7 @@
 				</div>
 			</div>
 
-			
+
 		</div>
 
 		<div class="container amenities_bar shadow" style="width: 50%; float: unset;margin-left: initial;margin-top: -40px;">

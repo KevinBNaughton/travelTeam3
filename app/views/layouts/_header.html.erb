@@ -47,24 +47,25 @@
             <%= link_to "Admin", admin_path %>
           </li>
         <% end %>
-
-
       </ul>
       <% if logged_in? %>
-      <li class="nav-item" id="box">
-        <%= link_to "Log out", logout_path, method: :delete %>
-      </li>
-      <li class="nav-item" id="box">
-        <%= link_to "Profile", profile_path(current_user) %>
-      </li>
-      <% else %>
-        <li id="box">
-            <%= link_to "Sign up", signup_path , class: "accountButton" %>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="box-wrap">
+        <li style="list-style-type:none;" class="nav-item" id="box">
+          <%= link_to "Profile", profile_path(current_user) %>
         </li>
-       <li id="box">
-            <%= link_to "Log in", login_path , class: "accountButton" %>
+        <li style="list-style-type:none;" class="nav-item" id="box">
+          <%= link_to "Log out", logout_path, method: :delete %>
         </li>
-      <% end %>
+        <% else %>
+        <li style="list-style-type:none;" class="nav-item" id="box">
+          <%= link_to "Sign up", signup_path%>
+        </li>
+        <li style="list-style-type:none;" class="nav-item" id="box">
+          <%= link_to "Log in", login_path%>
+        </li>
+        <% end %>
+      </ul>
+
 <!--
       <% if logged_in? %>
       <button class="accountButton">

@@ -11,12 +11,12 @@ class InitialPageController < ApplicationController
     @blogs = Blog.all
   end
 
-  def post
-    @blog = Blog.find(1)
-  end
+  #def post
+  #  @blog = Blog.post
+  #end
 
   def editBlog
-    @blog = Blog.find(params[:id])
+    @blog = Blog.find(params[:blog_id])
   end
 
   def goHome
