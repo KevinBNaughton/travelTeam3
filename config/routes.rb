@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get '/home',  to: 'initial_page#home'
   get '/contact',  to: 'initial_page#contact'
   get '/admin',  to: 'initial_page#admin'
-  get '/post',   to: 'initial_page#post'
+  #get '/post/:id',   to: 'blogs#post'
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
   get    '/login',   to: 'sessions#new'

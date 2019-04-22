@@ -7,19 +7,20 @@
 <header>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <style>
-   .accountButton {
-     background-color: lightblue;
-     border-radius: 7px;
-     color: navy;
-     padding: 0px 5px;
-     text-align: center;
-     text-decoration: none;
-     display: inline-block;
-     font-size: 16px;
-     margin: 0px 2px;
-     -webkit-transition-duration: 0.3s; /* Safari */
-     transition-duration: 0.3s;
-     cursor: pointer;
+
+  .accountButton {
+    background-color: lightblue;
+    border-radius: 5px;
+    color: navy;
+    padding: 0px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 8px;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+    cursor: pointer;
   }
   .accountButton:hover {
     background-color: navy;
@@ -46,20 +47,23 @@
             <%= link_to "Admin", admin_path %>
           </li>
         <% end %>
-
-        <% if logged_in? %>
-        <li class="nav-item" id="box">
-          <%= link_to "Log out", logout_path, method: :delete %>
-        </li>
-        <li class="nav-item" id="box">
+      </ul>
+      <div>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="box-wrap">
+      <% if logged_in? %>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="box-wrap">
+        <li style="list-style-type:none;" class="nav-item" id="box">
           <%= link_to "Profile", profile_path(current_user) %>
         </li>
-        <% else %>
-        <li id="box">
-            <%= link_to "Sign up", signup_path %>
+        <li style="list-style-type:none;" class="nav-item" id="box">
+          <%= link_to "Log out", logout_path, method: :delete %>
         </li>
-        <li id="box">
-            <%= link_to "Log in", login_path %>
+        <% else %>
+        <li style="list-style-type:none;" class="nav-item" id="box">
+          <%= link_to "Sign up", signup_path%>
+        </li>
+        <li style="list-style-type:none;" class="nav-item" id="box">
+          <%= link_to "Log in", login_path%>
         </li>
         <% end %>
       </ul>
