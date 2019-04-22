@@ -27,10 +27,10 @@
 
 	}
 
-	.jumbotron_fluid {
+	.jumbotron_fluid1 {
 
 		display: table;
-		width: 100%;
+		/*width: 100%;*/
 		height: 180px;
 		margin-top: 10px;
 
@@ -49,10 +49,11 @@
 
 	}
 	.amenities_bar{
+		float: unset;
+    width: 50%;
+    margin-left: initial;
 
 		height: 138px;
-		float: left;
-		width: 50%;
 		min-width: 430px;
 		margin-top: 30px;
 
@@ -79,10 +80,9 @@
 
 	.post_details {
 
-
-
 		width: 50%;
 		min-width: 400px;
+		height: 400px;
 
 		display: inline-block;
 
@@ -132,7 +132,7 @@
 
 		<% f = @blog %>
 		<div style="display: unset;">
-			<div class=" container post_details">
+			<div class="post_details">
 
 				<h1 style="text-align: center;font-size: -webkit-xxx-large;"><%= f.destination %></h1>
 				<h3 class="star">  &#x2605;&#x2605;&#x2605;&#x2605;</h3>
@@ -160,22 +160,24 @@
 							<input  class="form-control" type="number" name="">
 						</div>
 
+						<div style="display: inline-block;width: 50%; min-width: 400px;height:380px; text-align: center;margin-top: 8px;">
+				<label >Details</label>
+				<a><%= f.specialDetails %></a>
+				<textarea rows="8" cols="60" placeholder= %= f.specialDetails %></textarea> 
+
+			</div>
+
 
 
 					</div>
 				</div>
 			</div>
 
-			<div style="display: inline-block;width: 50%; min-width: 400px; text-align: center;margin-top: 8px;">
-				<label >Details</label>
-				<a><%= f.specialDetails %></a>
-				<!--<textarea rows="8" cols="60" placeholder=< %= f.specialDetails %>></textarea> -->
-
-			</div>
+			
 		</div>
 
-		<div class="container amenities_bar shadow">
-			<div class="jumbotron_fluid">
+		<div class="container amenities_bar shadow" style="width: 50%; float: unset;margin-left: initial;margin-top: -40px;">
+			<div class="jumbotron_fluid1">
 				<div style="text-align: -webkit-center;" >
 					<div class="form_check">
 						<h5 style="color: green;padding-right: 6px;">&#10004;</h5>

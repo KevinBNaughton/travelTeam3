@@ -17,20 +17,16 @@ class CreateBlogs < ActiveRecord::Migration[5.1]
       t.string :destination
 
 #flight info
-      t.boolean :flight
       t.integer :flightPrice
       t.string :flightDetails
 #cruise info
-      t.boolean :cruise
       t.integer :cruisePrice
       t.string :cruiseDetails
 #hotel info
-      t.boolean :hotel
       t.integer :hotelPrice
       t.integer :hotelBeds
       t.string :hotelDetails
 #special deal info
-      t.boolean :special
       t.string :specialName
       t.integer :specialPrice
       t.string :specialDetails
@@ -38,6 +34,7 @@ class CreateBlogs < ActiveRecord::Migration[5.1]
       t.boolean :postFacebook
       t.boolean :package
 
+      t.string :notes
 
 #booleans for checkboxes on admin page
       t.boolean :breakfast

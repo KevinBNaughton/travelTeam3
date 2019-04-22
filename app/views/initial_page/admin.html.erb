@@ -72,6 +72,7 @@
 </div>
 <!-- PACKAGES -->
   <div class="tab-pane fade" id="pills-packages" role="tabpanel" aria-labelledby="pills-packages-tab">
+<<<<<<< HEAD
     <form>
       <div class="container">
 
@@ -125,6 +126,33 @@
       </div>
     </form>
 
+=======
+    <table class="table">
+     <thead>
+       <tr>
+         <th scope="col">Name</th>
+         <th scope="col">Origin</th>
+         <th scope="col">Destination</th>
+         <th scope="col">Start Date</th>
+         <th scope="col">End Date</th>
+         <th scope="col">Overall Price</th>
+         <th scope="col">Notes</th>
+       </tr>
+     </thead>
+     <tbody>
+       <% @blogs.each do |blog| %>
+       <tr>
+         <td><%= blog.name %></td>
+         <td><%= blog.origin %></td>
+         <td><%= blog.destination %></td>
+         <td><%= blog.startDate %></td>
+         <td><%= blog.endDate %></td>
+         <td><%= blog.overallPrice %></td>
+       </tr>
+       <% end %>
+     </tbody>
+    </table>
+>>>>>>> b98ee77473712b62dce961a2daa02d51189f2106
   </div>
 </div>
 

@@ -1,4 +1,4 @@
-<!-- 
+<!--
 #
 # This is the HTML file for the "New Post" tab on the admin page
 # This is where the Admin can make new blog posts (travel listings) for the home page
@@ -22,8 +22,12 @@
   <%= f.date_field :startDate, placeholder: "Insert check in date", class: "form-control", style:" width: 70%; display: table-row;" %><br>
   <%= f.label :endDate %>
   <%= f.date_field :endDate, placeholder: "Insert check out date", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url, placeholder: "Image URL", class: "form-control", style:" width: 70%; display: table-row;" %><br>
   <%= f.label :overallDetails %>
   <%= f.text_field :overallDetails, placeholder: "Extra details", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+  <%= f.label :notes %>
+  <%= f.text_field :notes, placeholder: "Extra notes for you to remember", class: "form-control", style:" width: 70%; display: table-row;" %><br>
 
   <div class="jumbotron_fluid">
     <div style="padding-left: 60px;" >

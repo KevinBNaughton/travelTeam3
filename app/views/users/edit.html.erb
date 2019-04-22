@@ -1,0 +1,42 @@
+<% provide(:title, "Edit user") %>
+<%= render 'layouts/header' %>
+
+
+
+<div class=" container row">
+  <div class="col-md-6 col-md-offset-3" style="
+    background: #2992c46e;
+    position: sticky;
+    margin-top: 5%;
+    margin-bottom: 15%;
+    left: 30%;
+    border-radius: 15px;">
+
+    <h1 style="text-align: center;">Update your profile</h1>
+    <%= form_for(@user) do |f| %>
+
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+      <%= f.submit "Save changes", class: "btn btn-primary", style: 
+    "float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;"
+%>
+    <% end %>
+  </div>
+
+</div>
+
+
+<%= render 'layouts/footer'%>
