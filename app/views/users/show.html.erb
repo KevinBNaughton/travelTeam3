@@ -38,7 +38,7 @@
      </tr>
    </thead>
    <tbody>
-     <% @requests.each do |request| %>
+     <% @requests.where(:email => @user.email).each do |request| %>
      <tr>
        <td><%= request.userName %></td>
        <td><%= request.origin %></td>
