@@ -493,6 +493,10 @@ label {
  font-size: 16.5px;
 }
 
+.body_shadow {
+    box-shadow: -60px -100px 100px -90px #000000, 60px -100px 100px -90px #000000;
+    height: -webkit-fill-available;
+}
 /*#box_wrap > li:last-child {
      float:right
 }
