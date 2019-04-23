@@ -12,8 +12,14 @@ class RequestsController < ApplicationController
     if @request.save
       redirect_to root_path
     else
-      redirect_to root_path
+      render 'new'
     end
+  end
+
+  def destroy
+    Request.find(params[:id]).destroy
+    flash[:success] = "Request deleted"
+    redirect_to admin_path
   end
 
   private

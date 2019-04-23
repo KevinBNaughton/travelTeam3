@@ -1,0 +1,68 @@
+<% provide(:title, "User") %>
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="fon.css">
+
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+
+
+</head>
+
+<body class="container body_shadow">
+
+<%= render 'layouts/header' %>
+<div class="tab-pane fade" id="pills-cruise" role="tabpanel" aria-labelledby="pills-cruise-tab">
+
+  <table class="table">
+   <thead>
+     <tr>
+       <th scope="col">Email</th>
+       <th scope="col">Origin</th>
+       <th scope="col">Destination</th>
+       <th scope="col">Start Date</th>
+       <th scope="col">End Date</th>
+       <th scope="col">Overall Price</th>
+       <th scope="col"># Adults</th>
+       <th scope="col"># Children</th>
+       <th scope="col">Overall Details</th>
+       <th scope="col">Notes</th>
+       <th scope="col">Delete</th>
+     </tr>
+   </thead>
+   <tbody>
+     <% @requests.each do |request| %>
+     <tr>
+       <td><%= request.userName %></td>
+       <td><%= request.origin %></td>
+       <td><%= request.destination %></td>
+       <td><%= request.startDate %></td>
+       <td><%= request.endDate %></td>
+       <td><%= request.overallPrice %></td>
+       <td><%= request.numberAdults %></td>
+       <td><%= request.numberChildren %></td>
+       <td><%= request.overallDetails %></td>
+       <td><%= request.notes %></td>
+       <td><%= button_to "DELETE",  edit_request_path(request), method: :delete %></td>
+     </tr>
+     <% end %>
+   </tbody>
+  </table>
+
+</div>
+<%= render 'layouts/footer' %>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- <script type="text/javascript" src="fon.js"></script>
+-->
+</body>
+</html>
