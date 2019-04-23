@@ -1,10 +1,9 @@
 class Request < ApplicationRecord
 
-  validates :startDate,
-            presence:true
+  validates :startDate,presence:true
 
-  validates :endDate,
-            presence:true
+  validates :endDate,presence:true
+
 
   validates :origin,
             presence:true
@@ -14,7 +13,7 @@ class Request < ApplicationRecord
 
   validates :overallPrice,
             presence:true,
-            numericality: { only_integer: true }
+            numericality: { only_integer: true}
 
   validates :numberAdults,
             presence:true,
@@ -26,6 +25,7 @@ class Request < ApplicationRecord
 
   validates :overallDetails,
             presence:true
+
 
   # validate :end_date_must_be_greater_than_enddate
   #
