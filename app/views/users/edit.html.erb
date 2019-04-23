@@ -1,7 +1,7 @@
 <% provide(:title, "Edit user") %>
 <%= render 'layouts/header' %>
 
-<body background ="http://starkovtattoo.spb.ru/images/000/DSC100052152.jpg">
+<body style="background-repeat:no-repeat;background-image:url('https://i0.wp.com/canaveralresearchcenter.com/wp-content/uploads/2018/07/free-beach-wallpaper-screensavers-best-of-florida-beach-screensavers-and-wallpaper-florida-beach-android-of-free-beach-wallpaper-screensavers.jpg?ssl=1'); background-size:cover;">
 <% if current_user?(@user) %>
 <div class=" container row">
   <div class="col-md-6 col-md-offset-3" style="
@@ -44,9 +44,8 @@
 
 </div>
 
-<div style="background: #faebd7e8;">
+
 <%= render 'layouts/footer'%>
-</div>
 <% else %>
   <% goHome %>
 <% end %>
