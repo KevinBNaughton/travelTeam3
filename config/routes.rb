@@ -23,11 +23,14 @@ Rails.application.routes.draw do
   post    '/admin', to: 'blogs#create'
   get   '/request',  to: 'requests#new'
   post  '/request',  to: 'requests#create'
-  get   '/profile',  to: 'users#edit'
-  patch   '/profile', to: 'users#update'
+  delete '/requests/:id/edit', to: 'requests#destroy'
+  delete '/blogs/:id/edit', to: 'blogs#destroy'
+  #get   '/profile',  to: 'users#edit'
+  #patch   '/profile', to: 'users#update'
   #get   '/blogs', to: 'blogs#index'
 
   resources :blogs
+  resources :requests
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

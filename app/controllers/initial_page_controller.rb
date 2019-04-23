@@ -11,9 +11,6 @@ class InitialPageController < ApplicationController
     @blogs = Blog.all
   end
 
-  #def post
-  #  @blog = Blog.post
-  #end
 
   def editBlog
     @blog = Blog.find(params[:blog_id])

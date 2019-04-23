@@ -4,7 +4,9 @@ class UsersController < ApplicationController
   before_action :correct_user,   only: [:edit, :update]
 
   def show
+    current_user=User.find_by_email(session[:email])
     @user = User.find(params[:id])
+    @requests = Request.all
   end
 
   def index
@@ -40,22 +42,21 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
-
-  def logged_in_user
-        unless logged_in?
-          flash[:danger] = "Please log in."
-          redirect_to login_url
-        end
-  end
-
-  def correct_user
-      @user = current_user
-      redirect_to(root_url) unless current_user?(@user)
-  end
-
   private
+    def logged_in_user
+          unless logged_in?
+            flash[:danger] = "Please log in."
+            redirect_to login_url
+          end
+    end
+
+    def correct_user
+        @user = current_user
+        redirect_to(root_url) unless current_user?(@user)
+    end
+
     def user_params
-      params.require(:user).permit(:name, :email, :password)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
   # I put create and delete session in case you need it later
   #def create

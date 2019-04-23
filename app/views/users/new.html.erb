@@ -9,7 +9,6 @@
 </head>
 
 <style>
-
   .sr-only{
 
     border: 2px solid red;
@@ -21,7 +20,7 @@
 	}
 </style>
 
-<body background="https://i0.wp.com/canaveralresearchcenter.com/wp-content/uploads/2018/07/free-beach-wallpaper-screensavers-best-of-florida-beach-screensavers-and-wallpaper-florida-beach-android-of-free-beach-wallpaper-screensavers.jpg?ssl=1">
+<body style="background-repeat:no-repeat;background-image:url('https://i0.wp.com/canaveralresearchcenter.com/wp-content/uploads/2018/07/free-beach-wallpaper-screensavers-best-of-florida-beach-screensavers-and-wallpaper-florida-beach-android-of-free-beach-wallpaper-screensavers.jpg?ssl=1'); background-size:cover;">
 
 
   <%= render 'layouts/header' %>
@@ -37,7 +36,10 @@
     border-radius: 15px;">
 
   <%= form_for(@user, url: signup_path) do |f| %>
-  <h2 style=" text-align: center;">Please Sign Up</h2>
+  <h2 style="text-align: center;">Please Sign Up</h2>
+
+  <%= render 'shared/error_messages' %>
+
   <p>
     <%= f.label :name %>
     <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
@@ -50,18 +52,16 @@
     <%= f.label :password, class: "sr-only", style:"position:unset; overflow: visible;" %>
     <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
   </p>
-  <!--  <div class="checkbox">
-  <label>
-  <input type="checkbox" value="remember-me"> Remember me
-  </label>
-  </div> -->
-    <%= f.submit "Click to Sign Up", class: "btn btn-primary", style:
-    "float: right;
-    margin-top: -5px;
-    margin-bottom: 10px;" %>
-  <% end %>
-  <p>Already Registered? <%= link_to "Log in now!", login_path %></p>
-
+  <p>
+    <%= f.label :password_confirmation, class: "sr-only", style:"position:unset; overflow: visible;" %>
+    <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm Password" %>
+  </p>
+  <p><%= link_to "Already Registered?", login_path, class: "btn btn-primary" %>
+    <%= f.submit "Sign Up", class: "btn btn-primary", style:
+      "float: right;" %>
+    <% end %>
+  </p>
+  <br>
   </div>
   <%= render 'layouts/footer' %>
 </body>
