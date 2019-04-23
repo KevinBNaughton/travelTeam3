@@ -7,12 +7,12 @@
 
 </head>
 
-<body style="background-repeat:no-repeat;background-image:url('https://i0.wp.com/canaveralresearchcenter.com/wp-content/uploads/2018/07/free-beach-wallpaper-screensavers-best-of-florida-beach-screensavers-and-wallpaper-florida-beach-android-of-free-beach-wallpaper-screensavers.jpg?ssl=1'); background-size:cover;">
+<body>
 
 <%= render 'layouts/header' %>
 
-<table class="table" style="width:90%; margin:auto; margin-bottom:100px;">
-	<thead class="thead-dark">
+<table class="table">
+	<thead>
 		<tr>
 			<th scope="col">Email</th>
 			<th scope="col">Origin</th>
@@ -27,7 +27,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<% @requests.where(:email => current_user.email).each do |request| %>
+		<% @requests.where(:email == current_user.email).each do |request| %>
 		<tr>
 			<td><%= request.userName %></td>
 			<td><%= request.origin %></td>
