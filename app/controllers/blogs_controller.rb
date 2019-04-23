@@ -1,4 +1,5 @@
 class BlogsController < ApplicationController
+#  before_action :find_blog, only: [:show]#, :update, :destroy]
 
   def new
     @blog = Blog.new
@@ -23,10 +24,11 @@ class BlogsController < ApplicationController
   end
 
   private
+    # def find_blog
+    #   @blog = Blog.find(params[:blog_id])
+    # end
+
     def blog_params
-      params.require(:blog).permit(:name,:image_url,:overallPrice,:origin,:destination,:startDate,:endDate,:overallDetails)
-
+      params.require(:blog).permit(:name,:image_url,:overallPrice,:origin,:destination,:startDate,:endDate,:overallDetails,:breakfast,:fitness,:smoking,:swimming,:parking,:wifi,:bar)
     end
-
-
 end

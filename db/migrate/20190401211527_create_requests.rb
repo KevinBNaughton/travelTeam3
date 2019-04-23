@@ -14,6 +14,8 @@ class CreateRequests < ActiveRecord::Migration[5.1]
     t.string :origin
     t.string :destination
 
+    t.string :notes     #for admin to make on her page, not for person to request with
+
     t.timestamps
     end
   end

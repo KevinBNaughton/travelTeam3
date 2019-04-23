@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20190401211527) do
     t.string "overallDetails"
     t.string "origin"
     t.string "destination"
+    t.string "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
