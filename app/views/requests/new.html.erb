@@ -8,7 +8,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
-<body background="https://i0.wp.com/canaveralresearchcenter.com/wp-content/uploads/2018/07/free-beach-wallpaper-screensavers-best-of-florida-beach-screensavers-and-wallpaper-florida-beach-android-of-free-beach-wallpaper-screensavers.jpg?ssl=1">
+<body style="background-repeat:no-repeat;background-image:url('https://i0.wp.com/canaveralresearchcenter.com/wp-content/uploads/2018/07/free-beach-wallpaper-screensavers-best-of-florida-beach-screensavers-and-wallpaper-florida-beach-android-of-free-beach-wallpaper-screensavers.jpg?ssl=1'); background-size:cover;">
   <% if logged_in? %>
   <%= render 'layouts/header' %>
 <div  class="container col-md-6 col-md-offset-3 shadow1" style="
@@ -17,11 +17,12 @@
     margin-top: 5%;
     width: 40%;
     margin-bottom: 10%;
+    padding-bottom:50px;
     height: max-content;
     left: 30%;
     border-radius: 15px;">
   <%= form_for(:request,url: request_path) do |f| %>
-    <h2 style="text-align: center;">Please Create a Request for your Dream</h2>
+    <h2 style="text-align: center; margin-bottom:0px;"> Create a Request for your Dream</h2>
   <% if current_user %>
     <%= f.hidden_field :userName, value: current_user.email, class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
   <% end %>

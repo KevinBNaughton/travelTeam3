@@ -1,11 +1,8 @@
 class Request < ApplicationRecord
 
-  validates :startDate,
-            presence:true,
+  validates :startDate,presence:true
 
-  validates :endDate,
-            presence:true
-
+  validates :endDate,presence:true
 
 
   validates :origin,
