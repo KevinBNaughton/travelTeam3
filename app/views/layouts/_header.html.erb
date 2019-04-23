@@ -52,7 +52,11 @@
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="box-wrap">
           <% if logged_in? %>
           <li class="nav-item" id="box" style="list-style-type: none;">
-            <%= link_to "Profile", profile_path(current_user) %>
+            <%= link_to "Profile", current_user %>
+            <i style="margin-left: 5.5px;margin-right: 40px;"class="fas fa-user"></i>
+          </li>
+          <li class="nav-item" id="box" style="list-style-type: none;">
+            <%= link_to "Settings", edit_user_path(current_user) %>
             <i style="margin-left: 5.5px;margin-right: 40px;"class="fas fa-user"></i>
           </li>
           <li class="nav-item" id="box" style="list-style-type: none;">
