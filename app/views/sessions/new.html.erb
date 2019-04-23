@@ -9,7 +9,7 @@
 </head>
 
 <style >
-  
+
   .sr-only{
 
     border: 2px solid red;
@@ -41,21 +41,19 @@
     <%= f.email_field :email, class: "form-control", placeholder: "Email" %>
   </p>
   <p>
-    <%= f.label :password,"Password"%>
+    <%= f.label :password, class: "sr-only", style:"position:unset; overflow: visible;"%>
     <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
   </p>
-  <!--  <div class="checkbox">
-  <label>
-  <input type="checkbox" value="remember-me"> Remember me
-  </label>
-  </div> -->
-    <%= f.submit "Log In", class: "btn btn-primary", style: 
-    "float: right;
-    margin-top: -5px;
-    margin-bottom: 10px;" %>
-
-  <% end %>
-  <p>New User? <%= link_to "Sign up now!", signup_path %></p>
+  <p>
+    <%= f.label :password_confirmation, class: "sr-only", style:"position:unset; overflow: visible;"%>
+    <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm Password"%>
+  </p>
+  <p><%= link_to "New User?", signup_path, class: "btn btn-primary" %>
+    <%= f.submit "Log In", class: "btn btn-primary", style:
+      "float: right;" %>
+    <% end %>
+  </p>
+  <br>
 </div>
   <%= render 'layouts/footer' %>
 </body>
