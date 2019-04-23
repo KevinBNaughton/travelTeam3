@@ -1,13 +1,22 @@
+<!--
+#
+# This is the HTML file for the "Admin" page.
+# This contains the HTML for "User Requests" tab,
+# Which displays info for any requests users have submitted.
+# The HTML for the "New Posts" tab is rendered from app/views/blogs/new.html.erb
+#
+-->
 <% provide(:title, "Admin") %>
 <!DOCTYPE html>
 <html>
   <head>
     <title><%= yield(:title) %> | Bochitto Travel</title>
   </head>
+  <% if admin? %>
   <body>
     <%= render 'layouts/header' %>
 
-    <div class="container" >
+    <div class="container">
 
       <div style=" font-size: xx-large; margin-top: 3%;text-align: -webkit-center; " >
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" style="width: 600px;">
@@ -21,7 +30,7 @@
           </li>
 
           <li class="nav-item">
-            <a style="height: 55px;font-size: smaller;" class="nav-link " id="pills-packages-tab" data-toggle="pill" href="#pills-packages" role="tab" aria-controls="pills-contact" aria-selected="false">Posts</a>
+            <a style="height: 55px;font-size: smaller;" class="nav-link " id="pills-cruise-tab" data-toggle="pill" href="#pills-packages" role="tab" aria-controls="pills-contact" aria-selected="false">Blogs Posted</a>
           </li>
         </ul>
       </div>
@@ -42,8 +51,8 @@
 <!-- USER REQUEST -->
 <div class="tab-pane fade" id="pills-cruise" role="tabpanel" aria-labelledby="pills-cruise-tab">
 
-  <table class="table" style="width:90%; margin:auto;">
-   <thead class="thead-dark">
+  <table class="table">
+   <thead>
      <tr>
        <th scope="col">Email</th>
        <th scope="col">Origin</th>
@@ -55,6 +64,7 @@
        <th scope="col"># Children</th>
        <th scope="col">Overall Details</th>
        <th scope="col">Notes</th>
+       <th scope="col">Delete</th>
      </tr>
    </thead>
    <tbody>
@@ -69,17 +79,18 @@
        <td><%= request.numberAdults %></td>
        <td><%= request.numberChildren %></td>
        <td><%= request.overallDetails %></td>
-
+       <td><%= request.notes %></td>
+       <td><%= button_to "DELETE",  edit_request_path(request), method: :delete %></td>
      </tr>
      <% end %>
    </tbody>
   </table>
 
 </div>
-<!-- PACKAGES -->
+<!-- Blogs-->
   <div class="tab-pane fade" id="pills-packages" role="tabpanel" aria-labelledby="pills-packages-tab">
-    <table class="table" style="width:90%; margin:auto;">
-     <thead class="thead-dark">
+    <table class="table">
+     <thead>
        <tr>
          <th scope="col">Name</th>
          <th scope="col">Origin</th>
@@ -88,6 +99,7 @@
          <th scope="col">End Date</th>
          <th scope="col">Overall Price</th>
          <th scope="col">Notes</th>
+         <th scope="col">Delete</th>
        </tr>
      </thead>
      <tbody>
@@ -99,6 +111,8 @@
          <td><%= blog.startDate %></td>
          <td><%= blog.endDate %></td>
          <td><%= blog.overallPrice %></td>
+         <td><%= blog.notes %></td>
+         <td><%= button_to "DELETE",  edit_blog_path(blog), method: :delete %></td>
        </tr>
        <% end %>
      </tbody>
@@ -108,6 +122,8 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+  <% else %>
+    <% goHome %>
+  <% end %>
   </body>
 </html>
