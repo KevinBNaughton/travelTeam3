@@ -20,10 +20,6 @@
 
 <style >
 
-	label {
-		font-weight:bold;
-	}
-
 	.form_check {
 		position: unset;
 		display: inline-flex;
@@ -97,9 +93,6 @@
 
 		height: 180px;
 	}
-	h1, h2 {
-		margin-bottom:10px;
-	}
 
 	.shadow {
 		-moz-box-shadow:    inset 0 0 10px #000000;
@@ -119,9 +112,9 @@
 <body class="container body_shadow">
 
 	<%= render 'layouts/header' %>
-	<div>
+	<div  >
 
-		<div class=" post_pictures shadow" style=" margin-bottom: 10px;">
+		<div class=" post_pictures shadow" >
 			<div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel" >
 				<div class="carousel-inner" >
 					<div class="carousel-item active" >
@@ -137,82 +130,93 @@
 			</div>
 		</div>
 
+		<% f = @blog %>
 		<div style="display: unset;">
 			<div class="post_details">
-				<h1 style="text-align: center;font-size: -webkit-large; margin-bottom:25px;"><%= @blog.name %> Details </h1>
 
-			<h2 style="text-align: center; font-size: medium; font-style: italic; margin-bottom:25px;"> from: <span style="font-size: xx-large; font-style: normal;"><%= @blog.origin %></span> </h2>
-<h2 style="text-align: center; font-size: medium; font-style: italic; margin-bottom:25px;"> to: <span style="font-size: xx-large; font-style: normal;"><%= @blog.destination %></span> </h2>
-		<!--		<h3 class="star">  &#x2605;&#x2605;&#x2605;&#x2605;</h3>-->
-				<h2 style="text-align: center; font-size: small; font-style: italic; margin-bottom:25px;"> Price:  <span style="font-size: xx-large; font-style: normal;">$<%= @blog.overallPrice %></span> </h2>
-				<h5 style="text-align: center;font-style: italic; margin-bottom:25px;">  Availiable from <br> <span style="color:red;font-size:25px;" > <%= @blog.startDate %> </span> to <span style="color:red; font-size:25px;"> <%= @blog.endDate %> </span></h5>
+				<h1 style="text-align: center;font-size: -webkit-xxx-large;"><%= f.destination %></h1>
+				<h3 class="star">  &#x2605;&#x2605;&#x2605;&#x2605;</h3>
+				<h2 style="text-align: center; font-size: small; font-style: italic;"> from <span style="font-size: xx-large; font-style: normal;"><%= f.overallPrice %></span> </h2>
+				<h5 style="text-align: center;font-style: italic;">  Availiable from <br> <span> <%= f.startDate %> </span> to <span> <%= f.endDate %> </span></h5>
 				<hr>
-				<div style=" text-align: -webkit-center;" class="additionals">
+				<div style=" text-align: -webkit-center;">
 
 					<div style="text-align: center; width: 450px;">
+						<div class="date_post_input">
+							<label>Check in </label><br>
+							<input  class="form-control" type="date" name="">
+						</div>
+						<div class="date_post_input">
+							<label>Check in </label><br>
+							<input style=" text-align: center;" class="form-control" type="date" name="">
+						</div>
+
+						<div class="date_post_input">
+							<label>Guests  </label><br>
+							<input  class="form-control" type="number" name="">
+						</div>
+						<div class="date_post_input">
+							<label>Rooms </label><br>
+							<input  class="form-control" type="number" name="">
+						</div>
+
 						<div style="display: inline-block;width: 50%; min-width: 400px;height:380px; text-align: center;margin-top: 8px;">
 				<label >Details</label>
-				<p style="text-align:justify"><%= @blog.overallDetails %></p>
+				<a><%= f.specialDetails %></a>
+				<textarea rows="8" cols="60" placeholder=<% f.specialDetails %></textarea>
 
 			</div>
 
 
 
 					</div>
-
-
 				</div>
 			</div>
 
 
 		</div>
 
-		<div class="container amenities_bar shadow" style="width: 50%; float: unset;margin-left: initial;margin-top: 40px;">
+		<div class="container amenities_bar shadow" style="width: 50%; float: unset;margin-left: initial;margin-top: -40px;">
 			<div class="jumbotron_fluid1">
 				<div style="text-align: -webkit-center;" >
 					<div class="form_check">
-						<% if @blog.breakfast == true %>
+						<% f.breakfast != nil %>
 						<h5 style="color: green;padding-right: 6px;">&#10004;</h5>
-						<% end %>
+						<%end%>
 						<label class="form-check-label" for="exampleCheck1">Breakfast included</label>
 					</div>
 					<div class="form_check">
-						<% if @blog.swimming == true %>
+						<% f.fitness != nil %>
 						<h5 style="color: green;padding-right: 6px;">&#10004;</h5>
-						<% end %>
+						<%end%>
 						<label class="form-check-label" for="exampleCheck1">Swimming pool</label>
 					</div>
 					<div class="form_check">
-						<% if @blog.wifi == true %>
+						<% f.smoking != nil%>
 						<h5 style="color: green;padding-right: 6px;">&#10004;</h5>
 						<% end %>
 						<label class="form-check-label" for="exampleCheck1">Free WiFi</label>
 					</div>
 					<div class="form_check">
-						<% if @blog.fitness == true %>
-						<h5 style="color: green;padding-right: 6px;">&#10004;</h5>
-						<% end %>
+
 						<label class="form-check-label" for="exampleCheck1">Fitness center</label>
 					</div>
 					<div class="form_check">
-						<% if @blog.parking == true %>
 						<h5 style="color: green;padding-right: 6px;">&#10004;</h5>
-						<% end %>
 						<label class="form-check-label" for="exampleCheck1">Free parking</label>
 					</div>
 					<div class="form_check">
-						<% if @blog.bar == true %>
 						<h5 style="color: green;padding-right: 6px;">&#10004;</h5>
-						<% end %>
 						<label class="form-check-label" for="exampleCheck1">Bar</label>
 					</div>
 					<div class="form_check">
-						<% if @blog.smoking == true %>
 						<h5 style="color: green;padding-right: 6px;">&#10004;</h5>
-						<% end %>
 						<label class="form-check-label" for="exampleCheck1">Non-smoking rooms</label>
 					</div>
-
+					<div class="form_check">
+						<h5 style="color: green;padding-right: 6px;">&#10004;</h5>
+						<label class="form-check-label" for="exampleCheck1">Restaurant</label>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -1,27 +1,16 @@
-<!--
-#
-# This is the HTML file for the "Admin" page.
-# This contains the HTML for "User Requests" tab,
-# Which displays info for any requests users have submitted.
-# The HTML for the "New Posts" tab is rendered from app/views/blogs/new.html.erb
-#
--->
-
-
 <% provide(:title, "Admin") %>
 <!DOCTYPE html>
 <html>
   <head>
     <title><%= yield(:title) %> | Bochitto Travel</title>
   </head>
-  <% if admin? %>
   <body>
     <%= render 'layouts/header' %>
 
     <div class="container" >
 
       <div style=" font-size: xx-large; margin-top: 3%;text-align: -webkit-center; " >
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" style="width: 600px;">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" style="width: 370px;">
 
           <li class="nav-item">
            <a style="height: 55px;font-size: smaller;" class="nav-link active" id="pills-hotel-tab" data-toggle="pill" href="#pills-hotel" role="tab" aria-controls="pills-contact" aria-selected="true">New Post</a>
@@ -29,10 +18,6 @@
 
           <li class="nav-item">
             <a style="height: 55px;font-size: smaller;" class="nav-link " id="pills-cruise-tab" data-toggle="pill" href="#pills-cruise" role="tab" aria-controls="pills-contact" aria-selected="false">User Requests</a>
-          </li>
-
-          <li class="nav-item">
-            <a style="height: 55px;font-size: smaller;" class="nav-link " id="pills-cruise-tab" data-toggle="pill" href="#pills-packages" role="tab" aria-controls="pills-contact" aria-selected="false">Blogs Posted</a>
           </li>
         </ul>
       </div>
@@ -80,15 +65,70 @@
        <td><%= request.numberAdults %></td>
        <td><%= request.numberChildren %></td>
        <td><%= request.overallDetails %></td>
-       <td><%= request.notes %></td>
+       
      </tr>
      <% end %>
    </tbody>
   </table>
 
 </div>
-<!-- Blogs-->
+<!-- PACKAGES -->
   <div class="tab-pane fade" id="pills-packages" role="tabpanel" aria-labelledby="pills-packages-tab">
+<<<<<<< HEAD
+    <form>
+      <div class="container">
+
+        <label>LOCATION</label><input type="Price" class="form-control" placeholder="ex: New York" style=" width: 70%;margin-top: 2%; display: table-row;"><br>
+        <label>PICTURE</label><input type="UL" class="form-control" placeholder="ex: https://www.image.png" style=" width: 70%; display: table-row;"><br>
+        <label>PRICE</label><input type="Price" class="form-control" placeholder="ex: $199" style=" width: 70%; display: table-row;"><br>
+        <label>DETAILS</label><input type="tex-box" class="form-control" placeholder="Insert specific details about this POST" style=" width: 70%; display: table-row;"><br>
+
+        <div class="jumbotron_fluid">
+          <div style="padding-left: 60px;" >
+              <div class="form_check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Breakfast included</label>
+                  </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Swimming pool</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Free WiFi</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Fitness center</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Free parking</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Bar</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Non-smoking rooms</label>
+                </div>
+                <div class="form_check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Restaurant</label>
+                </div>
+          </div>
+        </div>
+
+
+        <label>CHECK IN</label><input type="date" class="form-control" placeholder="Insert check in date" style=" width: 70%; display: table-row;"><br>
+        <label>CHECK OUT</label><input type="date" class="form-control" placeholder="Insert check out date" style=" width: 70%; display: table-row;"><br>
+        <label>ROOMS</label><input type="number" class="form-control" placeholder="Insert how many Rooms" style=" width: 70%; display: table-row;"><br>
+
+      </div>
+    </form>
+
+=======
     <table class="table">
      <thead>
        <tr>
@@ -114,13 +154,12 @@
        <% end %>
      </tbody>
     </table>
+>>>>>>> b98ee77473712b62dce961a2daa02d51189f2106
   </div>
 </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <% else %>
-    <% goHome %>
-  <% end %>
+
   </body>
 </html>

@@ -7,13 +7,11 @@ class InitialPageController < ApplicationController
   end
 
   def admin
+
     @requests = Request.all
     @blogs = Blog.all
   end
 
-  #def post
-  #  @blog = Blog.post
-  #end
 
   def editBlog
     @blog = Blog.find(params[:blog_id])

@@ -29,6 +29,6 @@ class BlogsController < ApplicationController
     # end
 
     def blog_params
-      params.require(:blog).permit(:name,:image_url,:overallPrice,:origin,:destination,:startDate,:endDate,:overallDetails)
+      params.require(:blog).permit(:name,:image_url,:overallPrice,:origin,:destination,:startDate,:endDate,:overallDetails,:breakfast,:fitness,:smoking,:swimming,:parking,:wifi,:bar)
     end
 end
