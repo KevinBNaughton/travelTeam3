@@ -416,10 +416,18 @@
 <!-- DEALS SECTION  -->
 
 <aside>
-  <div class="jumbotron2">
-    <h1 class="display-4">DEALS</h1>
+  <div class="jumbotron2" style=" padding:30px;">
+    <h1 class="display-4">About Us</h1>
+    <p style="font-size:18px;">
+        We specialize in making sure you have your dream trip met. Whether it is a cruise to the bahamas or a flight around the world, We will make sure all of your needs are met.
+    </p>
+    <p style="font-size:18px;">
+      We are a local company from Gainesville, Florida Founded in March 2016. OUr main focus has been meeting group, family, or business travel needs.
+    </p>
 
+<!--
     <div id="post_deals" class="card" >
+
         <img class="card-img-top" src="http://www.ricardobofill.es/wp-content/uploads//2016/03/W_Barcelona_Hotel_Ricardo_Bofill_Taller_Arquitectura_Barcelona_Spain_01.jpg" style="width:100%; height: 180px">
         <div id="info_deals" class="card-body">
           <h4 class="card-title">Barcelona</h4>
@@ -431,8 +439,14 @@
         <span style="margin-left: 15px;">$299</span></h5>
         <h6 style="float: left;margin-left: 10px;">Only 1 left</h6>
         <button type="button" class="btn btn-primary btn-sm">Book Now</button>
-    </div>
 
+      <h2>About Us</h2>
+      <p>
+          We specialize in making sure you have your dream trip met. Whether it is a cruise to the bahamas or a flight around the world, We will make sure all of your needs are met.
+      </p>
+
+    </div>
+-->
 
 
 
@@ -474,7 +488,7 @@
       <div id="post" class="card">
         <%= link_to blog_path(blog) do %>
         <% if ((blog.image_url == "") || (blog.image_url == nil)) %>
-        <img class="card-img-top" src="http://www.ricardobofill.es/wp-content/uploads//2016/03/W_Barcelona_Hotel_Ricardo_Bofill_Taller_Arquitectura_Barcelona_Spain_01.jpg" style="width:100%; height: 180px">
+        <img class="card-img-top" src="https://www.incimages.com/uploaded_files/image/work-vacation-policy-pop_3122.jpg" style="width:100%; height: 180px">
         <% else %>
         <%= image_tag blog.image_url, style: "width:100%; height: 180px" %>
         <% end %>
