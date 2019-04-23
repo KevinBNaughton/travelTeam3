@@ -23,9 +23,9 @@ class InitialPageControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "Contact | #{@base_title}"
   end
 
-  test "should get admin" do
+  test "should not get admin because not logged in as admin" do
   get admin_path
-  assert_response :success
+  assert_response :redirect
   assert_select "title", "Admin | #{@base_title}"
 end
 

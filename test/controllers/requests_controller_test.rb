@@ -1,9 +1,9 @@
 require 'test_helper'
 
 class RequestsControllerTest < ActionDispatch::IntegrationTest
-  test "should get new" do
+  test "should not get new because not logged in" do
     get requests_new_url
-    assert_response :success
+    assert_response :redirect
   end
 
 end
