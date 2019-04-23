@@ -167,7 +167,7 @@
 
 		</div>
 
-		<div class="container amenities_bar shadow" style="width: 50%; float: unset;margin-left: initial;margin-top: 40px;">
+		<div class="container amenities_bar shadow" style="width: 50%; margin-right:0px; float: unset;margin-left: initial;margin-top: 40px;">
 			<div class="jumbotron_fluid1">
 				<div style="text-align: -webkit-center;" >
 					<div class="form_check">
@@ -179,36 +179,48 @@
 					<div class="form_check">
 						<% if @blog.swimming == true %>
 						<h5 style="color: green;padding-right: 6px;">&#10004;</h5>
+						<% else %>
+						<h5 style="color: green;padding-right: 6px;">&#10060;</h5>
 						<% end %>
 						<label class="form-check-label" for="exampleCheck1">Swimming pool</label>
 					</div>
 					<div class="form_check">
 						<% if @blog.wifi == true %>
 						<h5 style="color: green;padding-right: 6px;">&#10004;</h5>
+						<% else %>
+						<h5 style="color: green;padding-right: 6px;">&#10060;</h5>
 						<% end %>
 						<label class="form-check-label" for="exampleCheck1">Free WiFi</label>
 					</div>
 					<div class="form_check">
 						<% if @blog.fitness == true %>
 						<h5 style="color: green;padding-right: 6px;">&#10004;</h5>
+						<% else %>
+						<h5 style="color: green;padding-right: 6px;">&#10060;</h5>
 						<% end %>
 						<label class="form-check-label" for="exampleCheck1">Fitness center</label>
 					</div>
 					<div class="form_check">
 						<% if @blog.parking == true %>
 						<h5 style="color: green;padding-right: 6px;">&#10004;</h5>
+						<% else %>
+						<h5 style="color: green;padding-right: 6px;">&#10060;</h5>
 						<% end %>
 						<label class="form-check-label" for="exampleCheck1">Free parking</label>
 					</div>
 					<div class="form_check">
 						<% if @blog.bar == true %>
 						<h5 style="color: green;padding-right: 6px;">&#10004;</h5>
+						<% else %>
+						<h5 style="color: green;padding-right: 6px;">&#10060;</h5>
 						<% end %>
 						<label class="form-check-label" for="exampleCheck1">Bar</label>
 					</div>
 					<div class="form_check">
 						<% if @blog.smoking == true %>
 						<h5 style="color: green;padding-right: 6px;">&#10004;</h5>
+						<% else %>
+						<h5 style="color: green;padding-right: 6px;">&#10060;</h5>
 						<% end %>
 						<label class="form-check-label" for="exampleCheck1">Non-smoking rooms</label>
 					</div>
