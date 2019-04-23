@@ -8,21 +8,25 @@
 
 </head>
 
-<style >
-  
+<style>
+
   .sr-only{
 
     border: 2px solid red;
     height: none;
-  }
+	}
+
+ .shadow1 {
+    box-shadow: 0 5rem 1rem rgba(0,0,0,.15)!important;
+	}
 </style>
 
-<body background="http://sf.co.ua/2012/wallpaper-2029743.jpg">
+<body background="https://i0.wp.com/canaveralresearchcenter.com/wp-content/uploads/2018/07/free-beach-wallpaper-screensavers-best-of-florida-beach-screensavers-and-wallpaper-florida-beach-android-of-free-beach-wallpaper-screensavers.jpg?ssl=1">
 
-  
+
   <%= render 'layouts/header' %>
 
-  <div  class="container col-md-6 col-md-offset-3" style="
+  <div  class="container col-md-6 col-md-offset-3 shadow1" style="
     background: #fffff0cf;
     position: sticky;
     margin-top: 5%;
@@ -51,7 +55,7 @@
   <input type="checkbox" value="remember-me"> Remember me
   </label>
   </div> -->
-    <%= f.submit "Click to Sign Up", class: "btn btn-primary", style: 
+    <%= f.submit "Click to Sign Up", class: "btn btn-primary", style:
     "float: right;
     margin-top: -5px;
     margin-bottom: 10px;" %>

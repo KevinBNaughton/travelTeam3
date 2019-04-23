@@ -49,25 +49,28 @@
         <% end %>
       </ul>
       <div>
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="box-wrap">
-      <% if logged_in? %>
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="box-wrap">
-        <li style="list-style-type:none;" class="nav-item" id="box">
-          <%= link_to "Profile", profile_path(current_user) %>
-        </li>
-        <li style="list-style-type:none;" class="nav-item" id="box">
-          <%= link_to "Log out", logout_path, method: :delete %>
-        </li>
-        <% else %>
-        <li style="list-style-type:none;" class="nav-item" id="box">
-          <%= link_to "Sign up", signup_path%>
-        </li>
-        <li style="list-style-type:none;" class="nav-item" id="box">
-          <%= link_to "Log in", login_path%>
-        </li>
-        <% end %>
-      </ul>
-
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="box-wrap">
+          <% if logged_in? %>
+          <li class="nav-item" id="box" style="list-style-type: none;">
+            <%= link_to "Profile", profile_path(current_user) %>
+            <i style="margin-left: 5.5px;"class="fas fa-user"></i>
+          </li>
+          <li class="nav-item" id="box" style="list-style-type: none;">
+            <%= link_to "Log out", logout_path, method: :delete %>
+            <i style="margin-left: 5.5px;" class="fas fa-sign-out-alt"></i>
+          </li>
+          <% else %>
+          <li id="box" class="nav-item" style="list-style-type: none;">
+            <%= link_to "Sign up", signup_path %>
+            <i style="margin-left: 5.5px;" class="fas fa-user-plus"></i>
+          </li>
+          <li id="box" class="nav-item" style="list-style-type: none;">
+            <%= link_to "Log in", login_path %>
+            <i style="margin-left: 5.5px;margin-right: 40px;"class="fas fa-user"></i>
+          </li>
+          <% end %>
+        </ul>
+      </div>
 <!--
       <% if logged_in? %>
       <button class="accountButton">
