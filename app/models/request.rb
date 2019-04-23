@@ -16,7 +16,7 @@ class Request < ApplicationRecord
 
   validates :overallPrice,
             presence:true,
-            numericality: { message: "Value is need"}
+            numericality: { only_integer: true}
 
   validates :numberAdults,
             presence:true,

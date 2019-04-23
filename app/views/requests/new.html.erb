@@ -8,45 +8,65 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
-<body>
+<body background="https://i0.wp.com/canaveralresearchcenter.com/wp-content/uploads/2018/07/free-beach-wallpaper-screensavers-best-of-florida-beach-screensavers-and-wallpaper-florida-beach-android-of-free-beach-wallpaper-screensavers.jpg?ssl=1">
   <% if logged_in? %>
   <%= render 'layouts/header' %>
+<div  class="container col-md-6 col-md-offset-3 shadow1" style="
+    background: #fffff0cf;
+    position: sticky;
+    margin-top: 5%;
+    width: 40%;
+    margin-bottom: 10%;
+    height: max-content;
+    left: 30%;
+    border-radius: 15px;">
   <%= form_for(:request,url: request_path) do |f| %>
-  <div class="container">
-
-  <!--
-  < %= f.label :Email %>
-  < %= f.text_field :userName, placeholder: "Your Email", class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
-  -->
+    <h2 style="text-align: center;">Please Create a Request for your Dream</h2>
   <% if current_user %>
     <%= f.hidden_field :userName, value: current_user.email, class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
   <% end %>
-
+  <%= render 'shared/error_messages_requests' %>
+  <p>
   <%= f.label :origin %>
   <%= f.text_field :origin, placeholder: "ex: New York", class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
+  </p>
+  <p>
   <%= f.label :destination %>
   <%= f.text_field :destination, placeholder: "ex: Miami", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+  </p>
+  <p>
   <%= f.label :startDate %>
   <%= f.date_field :startDate, placeholder: "Insert check in date", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+  </p>
+  <p>
   <%= f.label :endDate %>
   <%= f.date_field :endDate, placeholder: "Insert check out date", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+  </p>
+  <p>
   <%= f.label :overallPrice %>
   <%= f.text_field :overallPrice, placeholder: "Estimated number you're willing to spend", class: "form-control", style:" width: 70%; display: table-row;" %><br>
+  </p>
+  <p>
   <%= f.label :numberAdults %>
   <%= f.select :numberAdults, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
+  </p>
+  <p>
   <%= f.label :numberChildren %>
   <%= f.select :numberChildren, [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],class: "form-control", style: " width: 70%;margin-top: 2%; display: table-row;" %><br>
+  </p>
+  <p>
   <%= f.label :overallDetails %>
   <%= f.text_field :overallDetails, placeholder: "All details about your dream vacation", class: "form-control", style:" width: 70%; display: table-row;" %><br>
-
-
-  <%= f.submit "Submit Request", class: "btn btn-primary" %>
-  </div>
-<% end %>
+  </p>
+  <p>
+  <%= f.submit "Submit Request", class: "btn btn-primary", style:
+    "float: right;" %>
+  </p>
+  <% end %>
+</div>
 
 <%= render 'layouts/footer' %>
 <% else %>
 <% goHome %>
 <% end %>
 </body>
-</html>
