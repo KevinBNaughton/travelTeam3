@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   before_action :correct_user,   only: [:edit, :update]
 
   def show
+    current_user=User.find_by_email(session[:email])
     @user = User.find(params[:id])
     @requests = Request.all
   end
